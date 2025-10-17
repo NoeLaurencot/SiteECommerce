@@ -1,0 +1,72 @@
+:root {
+
+    /*////////////////////////////
+    // Initialisation variables //
+    ////////////////////////////*/
+
+    --background: rgb(86, 86, 86);
+    --nav: linear-gradient(140deg, rgba(1, 0, 89, 1) 0%, rgba(0, 18, 97, 1) 18%, rgba(86, 12, 105, 1) 100%);
+    --main: rgb(217, 145, 30);
+    --white: white;
+    --black: black;
+}
+
+/* || Général */
+
+html,
+body {
+    margin: 0;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+/* || Utilities */
+
+.logo img {
+    display: block;
+    height: 50px;
+}
+
+.selected {
+    border-bottom: solid 4px var(--main);
+}
+
+/* || Navbar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-image: var(--nav);
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    margin-left: 40px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    margin-right: 40px;
+}
+
+nav a:not(.logo) {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--main);
+}
