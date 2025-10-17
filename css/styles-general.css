@@ -4,8 +4,9 @@
     // Initialisation variables //
     ////////////////////////////*/
 
-    --background: linear-gradient(90deg, rgba(98, 0, 122, 1) 0%, rgba(71, 0, 89, 1) 19%, rgba(26, 0, 87, 1) 100%);
-    --nav: linear-gradient(140deg, rgba(1, 0, 89, 1) 0%, rgba(0, 18, 97, 1) 18%, rgba(86, 12, 105, 1) 100%);
+    /*colors*/
+    --background: rgb(70, 70, 90);
+    --nav: linear-gradient(90deg,rgba(13, 20, 110, 1) 0%, rgba(87, 8, 130, 1) 100%);
     --main: rgb(217, 145, 30);
     --white: white;
     --black: black;
@@ -17,7 +18,7 @@ html,
 body {
     margin: 0;
     font-family: 'Arial Narrow Bold', sans-serif;
-    background-image: var(--background);
+    background-color: var(--background);
 }
 
 
@@ -52,7 +53,12 @@ nav {
     background-image: var(--nav);
     margin: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav span {
+    display: flex;
+    gap: 20px;
 }
 
 nav a:not(.logo) {
@@ -75,6 +81,13 @@ nav a:hover {
     margin-right: 20px;
 }
 
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
 /* || body */
 
 .content {
@@ -84,5 +97,5 @@ nav a:hover {
     margin: 20px;
     border-radius: 10px;
     background-color: rgba(48, 48, 48, 0.8);  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
