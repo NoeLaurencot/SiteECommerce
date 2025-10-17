@@ -1,0 +1,88 @@
+:root {
+
+    /*////////////////////////////
+    // Initialisation variables //
+    ////////////////////////////*/
+
+    --background: linear-gradient(90deg, rgba(98, 0, 122, 1) 0%, rgba(71, 0, 89, 1) 19%, rgba(26, 0, 87, 1) 100%);
+    --nav: linear-gradient(140deg, rgba(1, 0, 89, 1) 0%, rgba(0, 18, 97, 1) 18%, rgba(86, 12, 105, 1) 100%);
+    --main: rgb(217, 145, 30);
+    --white: white;
+    --black: black;
+}
+
+/* || Général */
+
+html,
+body {
+    margin: 0;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    background-image: var(--background);
+}
+
+
+/* || Utilities */
+
+.logo img {
+    display: block;
+    height: 50px;
+}
+
+.selected {
+    border-bottom: solid 4px var(--main);
+}
+
+/* désactive la sélection */
+.no-select {
+    user-select: none;
+}
+
+/* désactive la sélection symboles google */
+a.material-symbols-outlined {
+    user-select: none;
+}
+
+/* || Navbar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-image: var(--nav);
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav a:not(.logo) {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--main);
+}
+
+.most-left {
+    margin-left: 20px;
+}
+
+.most-right {
+    margin-right: 20px;
+}
+
+/* || body */
+
+.content {
+    display: flex;
+    width: calc(100vw - 40px);
+    height: 200px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: rgba(48, 48, 48, 0.8);  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
