@@ -6,8 +6,11 @@
 
     /*colors*/
     --background: rgb(70, 70, 90);
-    --nav: linear-gradient(90deg,rgba(13, 20, 110, 1) 0%, rgba(87, 8, 130, 1) 100%);
-    --main: rgb(217, 145, 30);
+    --background-second: rgb(50, 50, 50);
+    --main: rgb(13, 20, 110);
+    --secondary: rgb(87, 8, 130);
+    --nav: linear-gradient(90deg, rgb(13, 20, 110) 0%, rgb(87, 8, 130) 100%);
+    --accent: rgb(217, 145, 30);
     --white: white;
     --black: black;
 }
@@ -19,17 +22,24 @@ body {
     margin: 0;
     font-family: 'Arial Narrow Bold', sans-serif;
     background-color: var(--background);
+    color: var(--white);
 }
 
+/* Pour faire en sorte que le footer reste collé en bas de page */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 /* || Utilities */
 
 .selected {
-    border-bottom: solid 4px var(--main);
+    border-bottom: solid 4px var(--accent);
 }
 
 .selected-cart {
-    color: var(--main) !important;
+    color: var(--accent) !important;
 }
 
 /* désactive la sélection */
@@ -48,33 +58,49 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: fit-content;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     background-image: var(--nav);
     margin: 20px;
     border-radius: 8px;
+    width: calc(100vw - 40px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+    transition: 0.3s;
 }
 
-.logo img {
+/* Applique le style si .scrolled existe */
+nav.scrolled {
+    margin: 0;
+    margin-bottom: 20px;
+    border-radius: 0 0 8px 8px;
+    width: 100vw;
+}
+
+.nav-logo img {
     display: block;
     height: 60px;
 }
 
 nav span {
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 
 nav a:not(.logo) {
     color: var(--white);
     text-decoration: none;
     font-weight: bold;
-    padding: 15px 20px;
+    padding: 15px 25px;
     transition: 0.3s;
+    white-space: nowrap; /* Pour que le texte de wrap pas */
 }
 
 nav a:hover {
-    color: var(--main);
+    color: var(--accent);
 }
 
 .most-left {
@@ -85,21 +111,36 @@ nav a:hover {
     margin-right: 20px;
 }
 
-nav button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0 5px;
+.nav-icon {
+    font-size: 30px;
 }
 
 /* || body */
 
 .content {
     display: flex;
-    width: calc(100vw - 40px);
-    height: 200px;
+    width: calc(100vw - 40px); /* toute la viewwidth - la marge * 2 */
+    height: fit-content ;
     margin: 20px;
+    margin-top: 130px;
     border-radius: 10px;
-    background-color: rgba(48, 48, 48, 0.8);  
+    background-color: var(--background-second);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* || footer */
+
+footer {
+    display: flex;
+    margin-top: auto;
+    align-items: center;
+    justify-content: space-between;
+    background-image: var(--nav);
+    padding: 20px 10vw;
+    border-radius: 10px 10px 0 0;
+}
+
+.footer-logo img {
+    height: 100px;
 }

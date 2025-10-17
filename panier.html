@@ -16,7 +16,7 @@
     <header>
         <nav>
             <span class="most-left">
-                <a class="logo" href="#"><img src="assets/logo.png" alt="logo"></a>
+                <a class="nav-logo" href="index.html"><img src="assets/logo.png" alt="logo"></a>
             </span>
             <span>
                 <a href="index.html">Accueil</a>
@@ -24,16 +24,74 @@
                 <a href="a_propos.html">À propos</a>
             </span>
             <span class="most-right">
-                <a class="material-symbols-outlined selected-cart" href="panier.html">shopping_cart</a>
-                <a class="material-symbols-outlined account-icon" href="#">account_circle</a>
+                <a class="material-symbols-outlined selected-cart nav-icon" href="panier.html">shopping_cart</a>
+                <a class="material-symbols-outlined nav-icon" href="#">account_circle</a>
             </span>
         </nav>
     </header>
 
     <main class="content">
-
+        <section class="vente-cart-summary">
+            <div class="vente-cart-window vente-item-list">
+                <div class="vente-list-tile vente-cart-header vente-item-header">
+                    <h1>MON PANIER</h1>
+                    <span>Les articles serons réservés pendant 60 minutes</span>
+                </div>
+                <div class="vente-list-tile">
+                    <div>
+                        <img src="https://placehold.co/600x400?text=Article+1" alt="article">
+                    </div>
+                    <div class="vente-article-info">
+                    </div>
+                </div>
+                <div class="vente-list-tile">
+                    <div>
+                        <img src="https://placehold.co/600x400?text=Article+2" alt="article">
+                    </div>
+                    <div class="vente-article-info">
+                    </div>
+                </div>
+                <div class="vente-list-tile">
+                    <div>
+                        <img src="https://placehold.co/600x400?text=Article+3" alt="article">
+                    </div>
+                    <div class="vente-article-info">
+                    </div>
+                </div>
+                <div class="vente-list-tile">
+                    <div>
+                        <img src="https://placehold.co/600x400?text=Article+4" alt="article">
+                    </div>
+                    <div class="vente-article-info">
+                    </div>
+                </div>
+            </div>
+            <div class="vente-cart-window vente-total-list">
+                <div class="vente-list-tile vente-cart-header vente-total-header">
+                    <h1>TOTAL</h1>
+                </div>
+            </div>
+        </section>
     </main>
 
+
+    <footer>
+        <div>
+            <a class="footer-logo" href="index.html"><img src="assets/logo.png" alt=""></a>
+        </div>
+        <div>
+            <div>
+                <h3>Auteur</h3>
+                <p>Noé Laurençot</p>
+                <p>Étudiant BUT Informatique</p>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/nav-scroll.js"></script>
 </body>
 
 </html>
