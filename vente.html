@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+
+	<link href="css/styles-general.css" rel="stylesheet">
+	<link href="css/styles-general-mobile.css" rel="stylesheet">
+	<link href="css/styles-specific.css" rel="stylesheet">
+	<link href="css/styles-specific-mobile.css" rel="stylesheet">
+	<title>Vente</title>
 </head>
-<body>
-<header>
-    <nav>
-            <span class="nav-left">
-                <a class="logo" href="index.html"><img src="https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg" alt="logo"></a>
-            </span>
-        <span class="nav-right">
-                <a href="index.html">Accueil</a>
-                <a href="a_propos.html">À Propos</a>
-                <a  class="selected" href="vente.html">Boutique</a>
-                <a href="panier.html">Panier</a>
-            </span>
-    </nav>
-</header>
+
+<script src="vente-js/connect4.js"></script>
+
+<body class="third-page">
+	<h1>Acheter des articles d'utilité publique</h1>
+
+	<div class="vente-article-container">
+		<div>
+			Nom article
+			<img class="vente-article-image" src="https://placehold.co/600x400">
+		</div>
+		<span>
+			<div>
+				25 €
+				<button>Ajouter au panier</button>
+			</div>
+			<button class="vente-description-button">Description</button>
+		</span>
+	</div>
 </body>
+
 </html>

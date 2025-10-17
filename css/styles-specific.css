@@ -1,6 +1,51 @@
+/* 
+IMPORTANT : spécifier le nom de la page au début de CHAQUE CLASSE
+pour éviter les ambigüitées ex: .vente-article-container {}
+*/
+
 /* Page Accueil */
 
 /* Page Vente */
+
+body {
+
+}
+
+.article-container {
+	border-radius: 8px;
+	border: 2px solid #444;
+
+	width: 400px;
+	height: 400px;
+}
+
+.article-container > div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gape: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	align-content: center;
+	text-align: center;
+	font-size: 30px;
+}
+
+.article-image {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	height: 65%;
+}
+
+.article-container > span{
+	display: flex;
+	margin-top: 40px;
+	margin-left: 10px;
+	margin-right: 20px;
+	align-content: ;
+}
+
 
 /* Page Panier */
 
