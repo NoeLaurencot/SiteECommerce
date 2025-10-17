@@ -3,7 +3,7 @@
 ## Description
 
 Ceci est un site fictif de e-commerce réalisé dans le cadre d’un projet de classe.  
-Le site met en vente des objets inutiles.
+Le site met en vente des objets inutiles et absurdes.
 
 ## Pages du site
 
