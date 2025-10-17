@@ -24,13 +24,12 @@ body {
 
 /* || Utilities */
 
-.logo img {
-    display: block;
-    height: 50px;
-}
-
 .selected {
     border-bottom: solid 4px var(--main);
+}
+
+.selected-cart {
+    color: var(--main) !important;
 }
 
 /* désactive la sélection */
@@ -54,6 +53,11 @@ nav {
     margin: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+    display: block;
+    height: 60px;
 }
 
 nav span {
