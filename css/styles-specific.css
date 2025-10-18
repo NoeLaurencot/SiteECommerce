@@ -206,6 +206,10 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	align-items: baseline;
 }
 
+.cart-header h1 {
+	white-space: nowrap;
+}
+
 .cart-window {
 	background-color: var(--tile);
 	border-radius: 10px;
@@ -243,12 +247,12 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 }
 
 .cart-list-tile img {
-	height: 11vw;
+	height: calc(100px + 5vw);
 }
 
 .cart-list-tile:not(.cart-header):hover {
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.379);
-	transform: scale(1.036);
+	transform: scale(1.07);
 	background-color: var(--tile);
 	border-radius: 10px;
 	border: none;
@@ -260,6 +264,8 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 .cart-item-info {
 	display: flex;
+	justify-content: center;
+	gap: 5px;
 	padding: 10px;
 	width: 100%;
 	box-sizing: border-box;
@@ -269,19 +275,19 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	width: 100%;
 }
 
-.cart-item-desc >:not(.cart-quantity-selector){
+.cart-item-desc >:not(.cart-quantity-selector){ /* Pour aligner le texte au conteur quantité */
 	margin-left: 5px;
 }
 
 .cart-item-price {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
 	position: relative;
 }
 
 .cart-item-price > span {
-	font-size: 2em;
+	font-size: calc(1em + 1vw);
 	font-weight: bold;
     display: flex;
     align-items: center;
@@ -303,7 +309,7 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 .cart-item-price-detail {
 	display: flex;
 	position: absolute;
-	top: 76%;
+	left: 104%;
 	padding: 10px;
 	width: fit-content;
 	height: fit-content;
@@ -312,13 +318,15 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 	white-space: nowrap;
 	opacity: 0;
-	transition: 0.3s ease-out;
-	translate: 0 4px;
+	visibility: hidden;
+	transition: opacity 0.3s, translate 0.3s;
+	translate: 4px;
 }
 
 .cart-item-price>span:hover + .cart-item-price-detail { /* montre détail du prix quand on hover le prix */
-	opacity: 1;
-	translate: 0 0px;
+	opacity: 0.9;
+	translate: 0;
+	visibility: visible;
 }
 
 /* || Sélecteur de quantité */
