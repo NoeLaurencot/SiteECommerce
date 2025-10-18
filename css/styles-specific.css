@@ -7,65 +7,159 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 /* Page Vente */
 
-:root {
-
-    /*////////////////////////////
-    // Initialisation variables //
-    ////////////////////////////*/
-
-    /*colors*/
-    --background: rgb(70, 70, 90);
-    --background-second: rgb(50, 50, 50);
-	--tile: rgb(68, 68, 68);
-    --main: rgb(13, 20, 110);
-    --secondary: rgb(87, 8, 130);
-    --nav: linear-gradient(90deg, rgb(13, 20, 110) 0%, rgb(87, 8, 130) 100%);
-    --accent: rgb(217, 145, 30);
-    --white: white;
-    --black: black;
+.content {
+	flex-direction: column;
 }
 
-.article-container {
+.vente-article-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 20px;
+}
+
+.vente-article-container {
+	background-color: #888;
 	border-radius: 8px;
-	border: 2px solid var(--tile);
+	border: 3px solid #444;
 
 	width: 400px;
 	height: 400px;
 }
 
-.article-container>div {
+.vente-article-container:hover {
+	background-color: #444;
+	transition: 0.3s;
+}
+
+.vente-article-container > * {
+	color: white;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.vente-article-container > div{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 20px;
-	margin-left: 20px;
-	margin-right: 20px;
+	gap: 5%;
 	align-content: center;
 	text-align: center;
-	font-size: 30px;
+	font-size: 200%;
 }
 
-.article-image {
-	margin: 0 auto;
+.vente-article-image {
+	margin-left: auto;
+	margin-right: auto;
 	width: 90%;
 	height: 65%;
 }
 
-.article-container>span {
+.vente-article-container > p{
+	margin-top: 5%;
+}
+
+.vente-article-container > span{
 	display: flex;
-	margin-top: 40px;
-	margin-left: 10px;
-	margin-right: 20px;
+	margin-top: 5%;
+}
+
+.vente-buy {
+	display: flex;
+	flex-direction: column;
+
+	gap: 2%;
+}
+
+.vente-button {
+	border-radius: 4px;
+	border: 0px;
+	padding: 2%;
+	font-size: 100%;
+}
+
+.vente-panier {
+	background-color: #44f;
+	color: white;
+}
+
+.vente-panier:hover {
+	background-color: #88f;
+}
+
+.vente-description {
+	position: relative;
+  	display: inline-block;
+  	cursor: pointer;
+	margin-left: auto;
+}
+
+.vente-popup {
+	visibility: hidden;
+	width: 160px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -80px;
+}
+
+.vente-description .vente-show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+.vente-sussy-section {
+	margin-top: 50px;
+	color: #323232;
+}
+
+#vente-slider {
+    -webkit-appearance: none;     
+    padding: 0;                   
+    font: inherit;                
+    outline: none;
+    color: #323232;                  
+    background: #323232;             
+    box-sizing: border-box;  
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+#vente-slider::-moz-range-track {
+    height: 50%;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+#vente-slider::-moz-range-thumb {
+    width: 3em;
+    height: 3em;                
+    border: none;                   
+    border-radius: 0;               
+    background: currentColor;
+}
+
+#vente-slider::-moz-range-progress {
+    height: 0;
+    background: transparent;        
 }
 
 
 /* Page Panier */
 
-.vente-cart-selected {
+.panier-cart-selected {
 	border-bottom: solid 2px rgba(0, 0, 0, 0.5);
 }
 
-.vente-cart-summary {
+.panier-cart-summary {
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
@@ -74,53 +168,53 @@ pour éviter les ambigüitées ex: .vente-article-container {}
     height: calc(100% - 40px);
 }
 
-.vente-cart-summary div {
+.panier-cart-summary div {
 	/* border: solid 1px gray; */
 	padding: 10px;
 }
 
-.vente-cart-window {
+.panier-cart-window {
 	background-color: var(--tile);
 	border-radius: 10px;
 	padding: 10px 20px !important;
 }
 
-.vente-item-list {
+.panier-item-list {
 	display: flex;
 	flex-direction: column;
 	width: 60%; /* la proportion div des articles / div du total */
 }
 
-.vente-item-list .vente-list-tile {
+.panier-item-list .vente-list-tile {
 	display: flex;
 	width: calc(100% - 20px);
 }
 
-.vente-cart-header {
+.panier-cart-header {
 	display: flex;
 	border-bottom: solid 2px var(--white) !important;
 	align-items: baseline;
 }
 
-.vente-cart-header h1 {
+.panier-cart-header h1 {
 	margin: 0;
 }
 
-.vente-item-header {
+.panier-item-header {
 	justify-content: space-between;
 }
 
-.vente-total-header {
+.panier-total-header {
 	justify-content: center;
 }
 
-.vente-item-list img {
+.panier-item-list img {
 	display: block;
 	height: 10vw;
 	cursor: pointer;
 }
 
-.vente-total-list {
+.panier-total-list {
 	display: flex;
 	flex-direction: column;
 	width: 40%; /* la proportion div du total / div des articles */
