@@ -35,15 +35,6 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	gap: 20px;
 }
 
-/* 
-IMPORTANT : spécifier le nom de la page au début de CHAQUE CLASSE
-pour éviter les ambigüitées ex: .vente-article-container {}
-*/
-
-/* Page Accueil */
-
-/* Page Vente */
-
 .vente-article-container {
 	background-color: #888;
 	border-radius: 8px;
