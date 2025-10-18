@@ -36,10 +36,14 @@ body {
 
 .selected {
     border-bottom: solid 4px var(--accent);
+    box-sizing: border-box;
 }
 
 .selected-cart {
     color: var(--accent) !important;
+    border-bottom: solid 4px rgba(255, 255, 255, 0);
+    border-top: solid 4px rgba(255, 255, 255, 0);
+    box-sizing: border-box;
 }
 
 /* désactive la sélection */
@@ -52,6 +56,18 @@ a.material-symbols-outlined {
     user-select: none;
 }
 
+.no-margin {
+    margin: 0;
+}
+
+.text-justify-right {
+    text-align: right;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
 /* || Navbar */
 
 nav {
@@ -59,9 +75,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: fit-content;
+    padding: 11px 0;
     position: fixed;
     top: 0;
     left: 0;
+    gap: 10px;
     z-index: 1000;
     background-image: var(--nav);
     margin: 20px;
@@ -69,6 +87,7 @@ nav {
     width: calc(100vw - 40px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     overflow: auto;
+    box-sizing: border-box;
     transition: 0.3s;
 }
 
@@ -90,11 +109,11 @@ nav span {
     gap: 10px;
 }
 
-nav a:not(.logo) {
+nav a:not(.nav-logo) {
     color: var(--white);
     text-decoration: none;
     font-weight: bold;
-    padding: 15px 25px;
+    padding: 15px 2vw;
     transition: 0.3s;
     white-space: nowrap; /* Pour que le texte de wrap pas */
 }
@@ -113,6 +132,7 @@ nav a:hover {
 
 .nav-icon {
     font-size: 30px;
+    font-weight: normal !important;
 }
 
 /* || body */
@@ -120,12 +140,16 @@ nav a:hover {
 .content {
     display: flex;
     width: calc(100vw - 40px); /* toute la viewwidth - la marge * 2 */
-    height: fit-content ;
+    height: fit-content;
     margin: 20px;
     margin-top: 130px;
     border-radius: 10px;
     background-color: var(--background-second);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.content img {
+    border-radius: 8px;
 }
 
 
@@ -135,7 +159,8 @@ footer {
     display: flex;
     margin-top: auto;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20vw;
     background-image: var(--nav);
     padding: 20px 10vw;
     border-radius: 10px 10px 0 0;

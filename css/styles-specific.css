@@ -1,12 +1,3 @@
-/* 
-IMPORTANT : spécifier le nom de la page au début de CHAQUE CLASSE
-pour éviter les ambigüitées ex: .vente-article-container {}
-*/
-
-/* Page Accueil */
-
-/* Page Vente */
-
 :root {
 
     /*////////////////////////////
@@ -24,6 +15,15 @@ pour éviter les ambigüitées ex: .vente-article-container {}
     --white: white;
     --black: black;
 }
+
+/* 
+IMPORTANT : spécifier le nom de la page au début de CHAQUE CLASSE
+pour éviter les ambigüitées ex: .vente-article-container {}
+*/
+
+/* Page Accueil */
+
+/* Page Vente */
 
 .article-container {
 	border-radius: 8px;
@@ -59,13 +59,12 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 }
 
 
-/* Page Panier */
+/*/// Page Panier ///*/
 
-.vente-cart-selected {
-	border-bottom: solid 2px rgba(0, 0, 0, 0.5);
-}
 
-.vente-cart-summary {
+/* || Résumé du panier */
+
+.cart-summary {
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
@@ -74,53 +73,54 @@ pour éviter les ambigüitées ex: .vente-article-container {}
     height: calc(100% - 40px);
 }
 
-.vente-cart-summary div {
-	/* border: solid 1px gray; */
+.cart-summary div {
+	border: solid 1px gray;
 	padding: 10px;
 }
 
-.vente-cart-window {
-	background-color: var(--tile);
-	border-radius: 10px;
-	padding: 10px 20px !important;
-}
-
-.vente-item-list {
-	display: flex;
-	flex-direction: column;
-	width: 60%; /* la proportion div des articles / div du total */
-}
-
-.vente-item-list .vente-list-tile {
-	display: flex;
-	width: calc(100% - 20px);
-}
-
-.vente-cart-header {
+.cart-header {
 	display: flex;
 	border-bottom: solid 2px var(--white) !important;
 	align-items: baseline;
 }
 
-.vente-cart-header h1 {
-	margin: 0;
+/* || Résumé articles */
+
+.cart-window {
+	background-color: var(--tile);
+	border-radius: 10px;
+	padding: 10px 20px !important;
 }
 
-.vente-item-header {
+.cart-item-header {
 	justify-content: space-between;
 }
 
-.vente-total-header {
+.cart-item-list {
+	display: flex;
+	flex-direction: column;
+	width: 60%; /* la proportion div des articles / div du total */
+}
+
+.cart-item-list .cart-list-tile {
+	display: flex;
+	width: calc(100% - 20px);
+}
+
+.cart-item-list img {
+	display: block;
+	height: 11vw;
+}
+
+.cart-item-info
+
+/* || Résumé total */
+
+.cart-total-header {
 	justify-content: center;
 }
 
-.vente-item-list img {
-	display: block;
-	height: 10vw;
-	cursor: pointer;
-}
-
-.vente-total-list {
+.cart-total-list {
 	display: flex;
 	flex-direction: column;
 	width: 40%; /* la proportion div du total / div des articles */
