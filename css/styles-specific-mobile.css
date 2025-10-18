@@ -7,6 +7,35 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 /* Page Vente */
 
+.vente-article-container {
+	container-type: inline-size;
+}
+
+@container (max-width : 250px) {
+	.vente-article-container > * {
+		margin: 0px;
+	}
+
+	.vente-article-container > div {
+		width: 100%;
+		height: 100%;
+		gap: 0px;
+		font-size: 0px;
+	}
+	.vente-article-container > p {
+		display: none;
+	}
+	.vente-article-container > span {
+		display: none;
+	}
+
+	.vente-article-image {
+		margin: 0px;
+		width: 100%;
+		height: 100%;
+	}
+}
+
 /* Page Panier */
 
 /* Page A Propos */
