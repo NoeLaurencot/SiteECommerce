@@ -23,6 +23,7 @@ body {
     font-family: 'Arial Narrow Bold', sans-serif;
     background-color: var(--background);
     color: var(--white);
+    accent-color: var(--accent);
 }
 
 /* Pour faire en sorte que le footer reste collé en bas de page */

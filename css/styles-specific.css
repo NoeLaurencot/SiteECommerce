@@ -12,8 +12,16 @@
     --secondary: rgb(87, 8, 130);
     --nav: linear-gradient(90deg, rgb(13, 20, 110) 0%, rgb(87, 8, 130) 100%);
     --accent: rgb(217, 145, 30);
+	--border: rgb(140, 140, 140);
     --white: white;
     --black: black;
+
+	/*//////////////////////////*/
+
+}
+
+body {
+	accent-color: var(--accent);
 }
 /* 
 IMPORTANT : spécifier le nom de la page au début de CHAQUE CLASSE
@@ -24,9 +32,9 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 /* Page Vente */
 
-.content {
+/* .content {
 	flex-direction: column;
-}
+} */
 
 .vente-article-section {
 	display: flex;
@@ -171,6 +179,7 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 
 /*/// Page Panier ///*/
+/* Par Noé Laurençot */
 
 
 /* || Résumé du panier */
@@ -181,12 +190,13 @@ pour éviter les ambigüitées ex: .vente-article-container {}
     padding: 20px;
     gap: 1.5vw;
     width: 100%;
-    height: calc(100% - 40px);
+    height: fit-content;
+	box-sizing: border-box;
 }
 
+/* debug pour voir les border des divs */
 .cart-summary div {
-	border: solid 1px gray;
-	padding: 10px;
+	/* border: solid 1px var(--accent); */
 }
 
 .cart-header {
@@ -195,13 +205,14 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	align-items: baseline;
 }
 
-/* || Résumé articles */
-
 .cart-window {
 	background-color: var(--tile);
 	border-radius: 10px;
-	padding: 10px 20px !important;
+	padding: 15px;
+	height: fit-content;
 }
+
+/* || Résumé articles */
 
 .cart-item-header {
 	justify-content: space-between;
@@ -213,9 +224,15 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	width: 60%; /* la proportion div des articles / div du total */
 }
 
-.cart-item-list .cart-list-tile {
+.cart-list-tile {
 	display: flex;
-	width: calc(100% - 20px);
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.cart-list-tile:not(:last-child) { /* Sélectionne toutes lse tiles sauf la dernière */
+	border-bottom: dashed 2px var(--border);
 }
 
 .cart-item-list img {
@@ -223,7 +240,44 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	height: 11vw;
 }
 
-.cart-item-info
+.cart-item-info {
+	display: flex;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/* || Sélecteur de quantité */
+
+.cart-quantity-selector {
+    display: flex;
+    align-items: center;
+	width: fit-content;
+}
+
+.cart-quantity-selector input[type="number"] {
+	background: none;
+	color: var(--white);
+	border-radius: 5px;
+	width: 30px;
+	border: solid 1px var(--border);
+	appearance: textfield;
+	padding: 5px;
+	text-align: center;
+}
+
+.cart-quantity-selector button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.cart-quantity-selector button:hover {
+    color: var(--accent);
+}
 
 /* || Résumé total */
 
