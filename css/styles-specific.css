@@ -11,8 +11,9 @@
 	--main: rgb(13, 20, 110);
 	--secondary: rgb(87, 8, 130);
 	--nav: linear-gradient(90deg, rgb(13, 20, 110) 0%, rgb(87, 8, 130) 100%);
+	--nav-burger: linear-gradient(135deg, rgba(13, 20, 110, 1) 0%, rgba(87, 8, 130, 1) 43%);
 	--accent: rgb(217, 145, 30);
-	--button-hover: rgb(74, 7, 110);
+	--button-hover: rgb(76, 10, 111);;
 	--border: rgb(140, 140, 140);
 	--text-subtle: rgb(170, 170, 170);
 	--delete: rgb(172, 49, 47);
@@ -253,7 +254,8 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 }
 
 .cart-list-tile img {
-	height: calc(100px + 5vw);
+	width: 100%;
+	height: auto;
 }
 
 .cart-list-tile:not(.cart-header):hover {
@@ -261,12 +263,17 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	transform: scale(1.07);
 	background-color: var(--tile);
 	border-radius: 10px;
-	border: none;
 }
 
-.cart-list-tile:not(:last-child) {
-	/* Sélectionne toutes lse tiles sauf la dernière */
+/* .cart-list-tile:not(:last-child) {
 	border-bottom: dashed 2px var(--border);
+} */
+
+.divider-dashed{
+	width: 100%;
+	border: none;
+	border-top: dashed 2px var(--border);
+	margin: 0;
 }
 
 .cart-item-info {
@@ -319,26 +326,6 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	user-select: all;
 }
 
-@media (min-width: 1000px) {
-	.cart-item-price-detail {
-		display: flex;
-		position: absolute;
-		left: 104%;
-		padding: 10px;
-		width: fit-content;
-		height: fit-content;
-		background-color: rgba(0, 0, 0, 0.4);
-		border-radius: 10px;
-		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(5px);
-		white-space: nowrap;
-		opacity: 0;
-		visibility: hidden;
-		transition: 0.3s;
-		translate: 4px;
-	}
-}
-
 .cart-item-price > span:hover + .cart-item-price-detail {
 	/* montre détail du prix quand on hover le prix */
 	opacity: 1;
@@ -346,8 +333,27 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	visibility: visible;
 }
 
+.cart-item-price-detail {
+	display: flex;
+	position: absolute;
+	left: 104%;
+	padding: 10px;
+	width: fit-content;
+	height: fit-content;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	white-space: nowrap;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s;
+	translate: 4px;
+}
+
 .cart-item-delete {
 	position: absolute;
+	height: fit-content;
 	top: 5px;
 	right: 5px;
 	opacity: 0;
@@ -450,6 +456,10 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	translate: 0;
 }
 
+.cart-total-promo {
+	margin-bottom: 10px;
+}
+
 .cart-total-promo input[type="text"] {
 	width: 50%;
 	min-width: 15%;
@@ -471,13 +481,6 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 .cart-total-promo button:hover {
 	background-color: var(--secondary);
-}
-
-.cart-total-seperator {
-	display: flex;
-	width: 100%;
-	border-bottom: dashed 2px var(--border);
-	margin-top: 30px;
 }
 
 .cart-total-total {
@@ -514,44 +517,6 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	font-weight: bold;
 	background-color: var(--button-hover);
 	border-radius: 10px;
-}
-
-/* || Media */
-
-@media (max-width: 1000px) {
-	.cart-total-promo {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.cart-item-info {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.cart-item-price {
-		justify-content: flex-start;
-		margin-top: 10px;
-		margin-left: 8px;
-	}
-
-	.cart-item-price-detail {
-		display: flex;
-		position: absolute;
-		left: 60%;
-		padding: 10px;
-		width: fit-content;
-		height: fit-content;
-		background-color: rgba(0, 0, 0, 0.4);
-		border-radius: 10px;
-		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(5px);
-		opacity: 0;
-		visibility: hidden;
-		transition: 0.3s;
-		translate: 4px;
-	}
 }
 
 /* Page A Propos */

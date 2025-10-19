@@ -11,12 +11,16 @@
     --main: rgb(13, 20, 110);
     --secondary: rgb(87, 8, 130);
     --nav: linear-gradient(90deg, rgb(13, 20, 110) 0%, rgb(87, 8, 130) 100%);
+    --nav-burger: linear-gradient(135deg, rgba(13, 20, 110, 1) 0%, rgba(87, 8, 130, 1) 43%);
     --accent: rgb(217, 145, 30);
+    --button-hover: rgb(76, 10, 111);
     --border: rgb(140, 140, 140);
     --text-subtle: rgb(170, 170, 170);
     --delete: rgb(172, 49, 47);
     --white: white;
     --black: black;
+
+    /*//////////////////////////*/
 }
 
 /* || Général */
@@ -27,6 +31,7 @@ body {
     font-family: "Host Grotesk", 'Arial Narrow Bold', sans-serif;
     background-color: var(--background);
     color: var(--white);
+    position: relative;
     accent-color: var(--accent);
 }
 
@@ -132,7 +137,9 @@ nav.scrolled {
 
 .nav-logo img {
     display: block;
-    height: 60px;
+    width: 120px;
+    height: auto;
+    transition: 0.3s;
 }
 
 nav span {
@@ -142,6 +149,7 @@ nav span {
 }
 
 nav a:not(.nav-logo) {
+    /* Séléctionne que les liens de la nav de base */
     color: var(--white);
     text-decoration: none;
     font-weight: bold;
@@ -172,6 +180,14 @@ nav a:hover {
     font-weight: normal !important;
 }
 
+.nav-hamburger {
+    display: none;
+}
+
+.nav-hamburger-toggle {
+    display: none;
+}
+
 /* || body */
 
 .content {
@@ -180,10 +196,11 @@ nav a:hover {
     /* toute la viewwidth - la marge * 2 */
     height: fit-content;
     margin: 20px;
-    margin-top: 130px;
+    margin-top: 131px;
     border-radius: 10px;
     background-color: var(--background-second);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
 }
 
 .content img {
@@ -194,6 +211,13 @@ nav a:hover {
     cursor: default;
     color: var(--text-subtle);
     position: relative;
+}
+
+.divider{
+	width: 80%;
+	border: none;
+	border-top: solid 1px var(--border);
+	margin: 0;
 }
 
 
@@ -210,6 +234,13 @@ footer {
     border-radius: 10px 10px 0 0;
 }
 
+.auteur-info h3,
+.auteur-info p {
+    margin: 0;
+}
+
 .footer-logo img {
-    height: 100px;
+    display: block;
+    width: clamp(5rem, calc(18vw + 2rem), 20rem);
+    height: auto;
 }
