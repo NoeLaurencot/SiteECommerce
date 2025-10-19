@@ -40,10 +40,15 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 /* Page Panier */
 
-@media (max-width: 600px) {
+@media (max-width: 780px) {
 	.cart-summary {
 		display: flex;
 		flex-direction: column;
+		gap: 20px;
+	}
+
+	.cart-window {
+		width: calc(100% - 30px);
 	}
 }
 
