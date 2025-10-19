@@ -202,11 +202,6 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	box-sizing: border-box;
 }
 
-/* debug pour voir les border des éléments */
-/* .cart-summary div, .cart-summary span {
-	border: solid 1px var(--accent);
-} */
-
 .cart-header {
 	display: flex;
 	border-bottom: solid 2px var(--white) !important;
@@ -228,6 +223,7 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 .cart-item-header {
 	justify-content: space-between;
+	padding-bottom: 10px;
 }
 
 .cart-item-header > span {
@@ -245,10 +241,12 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 .cart-list-tile {
 	display: flex;
 	position: relative;
+	background-color: var(--tile);
+	border-radius: 10px;
 	padding: 10px;
 	width: 100%;
 	box-sizing: border-box;
-	transition: transform 0.3s, box-shadow 0.1s;
+	transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .cart-item-img {
@@ -261,16 +259,11 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	height: auto;
 }
 
-.cart-list-tile:not(.cart-header):hover {
+.cart-list-tile:hover {
+	z-index: 500;
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.379);
 	transform: scale(1.07);
-	background-color: var(--tile);
-	border-radius: 10px;
 }
-
-/* .cart-list-tile:not(:last-child) {
-	border-bottom: dashed 2px var(--border);
-} */
 
 .divider-dashed{
 	width: 100%;
@@ -408,6 +401,7 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 .cart-total-header {
 	justify-content: center;
+	padding-bottom: 4px;
 }
 
 .cart-total-list {

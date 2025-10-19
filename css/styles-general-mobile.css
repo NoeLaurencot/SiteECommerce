@@ -143,11 +143,13 @@
         background-color: rgba(0, 0, 0, 0);
         position: fixed;
         z-index: 1000;
-        backdrop-filter: blur(1px);
+        backdrop-filter: blur(2px);
         width: 100%;
         height: 100dvh;
         top: 0;
-        right: -200%;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
         transition: 0.5s ease;
     }
 
@@ -173,7 +175,8 @@
     }
 
     .nav-hamburger button:focus-within + .nav-hamburger-blur {
-        right: 0;
+        visibility: visible;
+        opacity: 1;
     }
 
     nav button:focus-within ~ .nav-hamburger-close {
