@@ -22,9 +22,11 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 		gap: 0px;
 		font-size: 0px;
 	}
+
 	.vente-article-container > p {
 		display: none;
 	}
+
 	.vente-article-container > span {
 		display: none;
 	}
@@ -37,5 +39,12 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 }
 
 /* Page Panier */
+
+@media (max-width: 600px) {
+	.cart-summary {
+		display: flex;
+		flex-direction: column;
+	}
+}
 
 /* Page A Propos */

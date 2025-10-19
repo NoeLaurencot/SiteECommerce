@@ -66,6 +66,7 @@
                             </div>
                         </div>
                     </div>
+                    <span class="material-symbols-outlined cart-item-delete no-select cursor-pointer">close</span>
                 </div>
 
                 <div class="cart-list-tile">
@@ -93,6 +94,7 @@
                             </div>
                         </div>
                     </div>
+                    <span class="material-symbols-outlined cart-item-delete no-select cursor-pointer">close</span>
                 </div>
 
                 <div class="cart-list-tile">
@@ -120,12 +122,116 @@
                             </div>
                         </div>
                     </div>
+                    <span class="material-symbols-outlined cart-item-delete no-select cursor-pointer">close</span>
+                </div>
+
+                <div class="cart-list-tile">
+                    <div class="cart-item-img">
+                        <img src="https://placehold.co/600x400?text=Article" alt="article">
+                    </div>
+                    <div class="cart-item-info">
+                        <div class="cart-item-desc">
+                            <h3 class="no-margin cursor-pointer underline-hover">Article</h3>
+                            <p>Vendeur: placeholder</p>
+                            <span class="cart-item-quantity">
+                                <span>Quantité</span>
+                                <span class="cart-quantity-selector">
+                                    <button class="material-symbols-outlined">remove</button>
+                                    <input type="number" value="2" min="1">
+                                    <button class="material-symbols-outlined">add</button>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="cart-item-price">
+                            <span>9999,98€</span>
+                            <div class="cart-item-price-detail">
+                                <span>Détail:&nbsp;</span> <!-- &nbsp; est un caractère espace -->
+                                <span>2 x 4999,9€</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined cart-item-delete no-select cursor-pointer">close</span>
+                </div>
+
+                <div class="cart-list-tile">
+                    <div class="cart-item-img">
+                        <img src="https://placehold.co/600x400?text=Article" alt="article">
+                    </div>
+                    <div class="cart-item-info">
+                        <div class="cart-item-desc">
+                            <h3 class="no-margin cursor-pointer underline-hover">Article</h3>
+                            <p>Vendeur: placeholder</p>
+                            <span class="cart-item-quantity">
+                                <span>Quantité</span>
+                                <span class="cart-quantity-selector">
+                                    <button class="material-symbols-outlined">remove</button>
+                                    <input type="number" value="1" min="1">
+                                    <button class="material-symbols-outlined">add</button>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="cart-item-price">
+                            <span>5,00€</span>
+                            <div class="cart-item-price-detail">
+                                <span>Détail:&nbsp;</span> <!-- &nbsp; est un caractère espace -->
+                                <span>1 x 5,00€</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined cart-item-delete no-select cursor-pointer">close</span>
                 </div>
 
             </div>
             <div class="cart-window cart-total-list">
                 <div class="cart-list-tile cart-header justify-center">
                     <h1 class="no-margin">TOTAL</h1>
+                </div>
+
+                <div class="cart-total-subtotal cart-total-line">
+                    <span>
+                        <h3 class="no-margin text-subtle">Sous-total</h3>
+                    </span>
+                    <span class="cart-total-link"></span>
+                    <span class="text-subtle">8 561,67€</span>
+                </div>
+
+                <div class="cart-total-taxes cart-total-line">
+                    <span>
+                        <h3 class="no-margin text-subtle">Total taxes</h3>
+                    </span>
+                    <span class="cart-total-link"></span>
+                    <span class="text-subtle">1 686,26€</span>
+                </div>
+
+                <div class="cart-total-delivery cart-total-line">
+                    <span>
+                        <h2 class="no-margin">Livraison</h2>
+                    </span>
+                    <span class="cart-total-link"></span>
+                    <span class="info-icon">
+                        <span class="material-symbols-outlined info-icon">info</span>
+                        <span class="cart-total-delivery-detail">Le prix de la livraison sera calculé lors du paiement</span>
+                    </span>
+                </div>
+
+                <div class="cart-total-promo cart-total-line">
+                    <span>
+                        <h2 class="no-margin">Code Promotion</h2>
+                    </span>
+                    <input type="text" placeholder="Code Promo">
+                    <button>Valider</button>
+                </div>
+                <div class="cart-total-seperator"></div>
+                <div class="cart-total-total cart-total-line">
+                    <span>
+                        <h1 class="no-margin">Total</h3>
+                    </span>
+                    <span class="cart-total-link"></span>
+                    <span class="cart-total-total-amount">10 247.93€</span>
+                </div>
+
+                <div class="cart-total-checkout">
+                    <button>Valider la commande</button>
                 </div>
             </div>
         </section>

@@ -7,10 +7,14 @@
     /*colors*/
     --background: rgb(70, 70, 90);
     --background-second: rgb(50, 50, 50);
+    --tile: rgb(68, 68, 68);
     --main: rgb(13, 20, 110);
     --secondary: rgb(87, 8, 130);
     --nav: linear-gradient(90deg, rgb(13, 20, 110) 0%, rgb(87, 8, 130) 100%);
     --accent: rgb(217, 145, 30);
+    --border: rgb(140, 140, 140);
+    --text-subtle: rgb(170, 170, 170);
+    --delete: rgb(172, 49, 47);
     --white: white;
     --black: black;
 }
@@ -20,10 +24,11 @@
 html,
 body {
     margin: 0;
-    font-family: "Grotesk", 'Arial Narrow Bold', sans-serif;
+    font-family: "Host Grotesk", 'Arial Narrow Bold', sans-serif;
     background-color: var(--background);
     color: var(--white);
     accent-color: var(--accent);
+    overflow-x: hidden;
 }
 
 /* Pour faire en sorte que le footer reste collé en bas de page */
@@ -49,38 +54,50 @@ body {
 
 /* désactive la sélection */
 .no-select {
-    user-select: none;
+    user-select: none !important;
 }
 
 /* désactive la sélection texte */
 
 .select-whole {
-    user-select: all;
+    user-select: all !important;
 }
 
-/* désactive la sélection texte pour les symboles google */
-a.material-symbols-outlined {
-    user-select: all;
+/* désactive la sélection pour les symboles google */
+.material-symbols-outlined {
+    user-select: none;
 }
 
 .no-margin {
     margin: 0;
 }
 
-.text-justify-right {
-    text-align: right;
-}
-
 .justify-center {
     justify-content: center;
 }
 
+/* cursors */
 .cursor-pointer {
     cursor: pointer;
 }
 
+.cursor-default {
+    cursor: default;
+}
+
 .underline-hover:hover {
     text-decoration: underline;
+}
+
+/*text*/
+
+.text-subtle {
+    text-decoration: none;
+    color: var(--text-subtle);
+}
+
+.text-justify-right {
+    text-align: right;
 }
 
 /* || Navbar */
@@ -131,7 +148,8 @@ nav a:not(.nav-logo) {
     font-weight: bold;
     padding: 15px 2vw;
     transition: 0.3s;
-    white-space: nowrap; /* Pour que le texte de wrap pas */
+    white-space: nowrap;
+    /* Pour que le texte de wrap pas */
 }
 
 nav a:hover {
@@ -159,7 +177,8 @@ nav a:hover {
 
 .content {
     display: flex;
-    width: calc(100vw - 40px); /* toute la viewwidth - la marge * 2 */
+    width: calc(100vw - 40px);
+    /* toute la viewwidth - la marge * 2 */
     height: fit-content;
     margin: 20px;
     margin-top: 130px;
@@ -170,6 +189,12 @@ nav a:hover {
 
 .content img {
     border-radius: 8px;
+}
+
+.info-icon {
+    cursor: default;
+    color: var(--text-subtle);
+    position: relative;
 }
 
 
