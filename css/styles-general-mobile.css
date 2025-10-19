@@ -78,6 +78,10 @@
         font-size: 2rem;
         color: var(--white);
         transition: 0.3s;
+        /* Pour eviter que ça sélectionne quand on appuie sur mobile */
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        -webkit-touch-callout: none;
     }
 
     .nav-hamburger-toggle:hover {
