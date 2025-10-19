@@ -4,11 +4,23 @@
     // Initialisation variables //
     ////////////////////////////*/
 
-    --background: rgb(39, 26, 107);
-    --nav: linear-gradient(140deg, rgba(1, 0, 89, 1) 0%, rgba(0, 18, 97, 1) 18%, rgba(86, 12, 105, 1) 100%);
-    --main: rgb(217, 145, 30);
+    /*colors*/
+    --background: rgb(70, 70, 90);
+    --background-second: rgb(50, 50, 50);
+    --tile: rgb(68, 68, 68);
+    --main: rgb(13, 20, 110);
+    --secondary: rgb(87, 8, 130);
+    --nav: linear-gradient(90deg, rgb(13, 20, 110) 0%, rgb(87, 8, 130) 100%);
+    --nav-burger: linear-gradient(135deg, rgba(13, 20, 110, 1) 0%, rgba(87, 8, 130, 1) 43%);
+    --accent: rgb(217, 145, 30);
+    --button-hover: rgb(76, 10, 111);
+    --border: rgb(140, 140, 140);
+    --text-subtle: rgb(170, 170, 170);
+    --delete: rgb(172, 49, 47);
     --white: white;
     --black: black;
+
+    /*//////////////////////////*/
 }
 
 /* || Général */
@@ -16,24 +28,80 @@
 html,
 body {
     margin: 0;
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-family: "Host Grotesk", 'Arial Narrow Bold', sans-serif;
     background-color: var(--background);
+    color: var(--white);
+    position: relative;
+    accent-color: var(--accent);
+}
+
+/* Pour faire en sorte que le footer reste collé en bas de page */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* || Utilities */
 
-.logo img {
-    display: block;
-    height: 50px;
-}
-
 .selected {
-    border-bottom: solid 4px var(--main);
+    border-bottom: solid 4px var(--accent);
+    box-sizing: border-box;
 }
 
-/* pour selection en entier */
-.no-select {
+.selected-cart {
+    color: var(--accent) !important;
+    border-bottom: solid 4px rgba(255, 255, 255, 0);
+    border-top: solid 4px rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+}
 
+/* désactive la sélection */
+.no-select {
+    user-select: none !important;
+}
+
+/* désactive la sélection texte */
+
+.select-whole {
+    user-select: all !important;
+}
+
+/* désactive la sélection pour les symboles google */
+.material-symbols-outlined {
+    user-select: none;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+/* cursors */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.underline-hover:hover {
+    text-decoration: underline;
+}
+
+/*text*/
+
+.text-subtle {
+    text-decoration: none;
+    color: var(--text-subtle);
+}
+
+.text-justify-right {
+    text-align: right;
 }
 
 /* || Navbar */
@@ -42,29 +110,137 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: fit-content;
+    padding: 11px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    gap: 10px;
+    z-index: 1000;
     background-image: var(--nav);
     margin: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-nav a:not(.logo) {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 15px 20px;
+    width: calc(100vw - 40px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+    box-sizing: border-box;
     transition: 0.3s;
 }
 
-nav a:hover {
-    color: var(--main);
+/* Applique le style quand .scrolled est ajouté avec le javascript */
+nav.scrolled {
+    margin: 0;
+    margin-bottom: 20px;
+    border-radius: 0 0 8px 8px;
+    width: 100vw;
 }
 
-.most-left {
+.nav-logo img {
+    display: block;
+    width: 120px;
+    height: auto;
+    transition: 0.3s;
+}
+
+nav span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+nav a:not(.nav-logo) {
+    /* Séléctionne que les liens de la nav de base */
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 2vw;
+    transition: 0.3s;
+    white-space: nowrap;
+    /* Pour que le texte de wrap pas */
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.nav-left {
     margin-left: 20px;
 }
 
-.most-right {
+.nav-middle {
+    font-size: 1.2em;
+}
+
+.nav-right {
     margin-right: 20px;
+}
+
+.nav-icon {
+    font-size: 30px;
+    font-weight: normal !important;
+}
+
+.nav-hamburger {
+    display: none;
+}
+
+.nav-hamburger-toggle {
+    display: none;
+}
+
+/* || body */
+
+.content {
+    display: flex;
+    width: calc(100vw - 40px);
+    /* toute la viewwidth - la marge * 2 */
+    height: fit-content;
+    margin: 20px;
+    margin-top: 131px;
+    border-radius: 10px;
+    background-color: var(--background-second);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.content img {
+    border-radius: 8px;
+}
+
+.info-icon {
+    cursor: default;
+    color: var(--text-subtle);
+    position: relative;
+}
+
+.divider{
+	width: 80%;
+	border: none;
+	border-top: solid 1px var(--border);
+	margin: 0;
+}
+
+
+/* || footer */
+
+footer {
+    display: flex;
+    margin-top: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20vw;
+    background-image: var(--nav);
+    padding: 20px 10vw;
+    border-radius: 10px 10px 0 0;
+}
+
+.auteur-info h3,
+.auteur-info p {
+    margin: 0;
+}
+
+.footer-logo img {
+    display: block;
+    width: clamp(5rem, calc(18vw + 2rem), 20rem);
+    height: auto;
 }
