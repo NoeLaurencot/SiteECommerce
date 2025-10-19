@@ -32,6 +32,7 @@ body {
     color: var(--white);
     position: relative;
     accent-color: var(--accent);
+    overflow-x: hidden;
 }
 
 /* Pour faire en sorte que le footer reste collé en bas de page */

@@ -77,6 +77,11 @@
         cursor: pointer;
         font-size: 2rem;
         color: var(--white);
+        transition: 0.3s;
+    }
+
+    .nav-hamburger-toggle:hover {
+        color: var(--accent);
     }
 
     /* Le menu hamburger */
@@ -84,7 +89,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: var(--background-second);
+        justify-content: flex-start;
+        gap: calc(50% - 13rem);
+        box-sizing: border-box;
+        background-color: var(--background-second); 
         position: fixed;
         cursor: default;
         border-radius: 10px 0 0 10px;
@@ -92,7 +100,8 @@
         z-index: 2000;
         width: 60vw;
         height: 100dvh;
-        /* Hauteur dynamique pour les mobiles *//* fallback */
+        /* Hauteur dynamique pour les mobiles */
+        height: 100vh ;/* fallback */
         top: 0;
         right: -60%;
         opacity: 0;

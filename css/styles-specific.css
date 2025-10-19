@@ -521,7 +521,6 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 }
 
 .cart-total-checkout button:hover {
-	font-family: "H";
 	cursor: pointer;
 	color: var(--white);
 	font-weight: bold;

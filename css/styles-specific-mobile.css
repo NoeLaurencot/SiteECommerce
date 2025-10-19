@@ -155,6 +155,10 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	.cart-list-tile img {
 		width: 80%;
 	}
+
+	.cart-item-price {
+		user-select: none;
+	}
 }
 
 
