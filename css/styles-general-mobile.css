@@ -90,7 +90,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        gap: calc(50% - 13rem);
+        gap: 1rem;
         box-sizing: border-box;
         background-color: var(--background-second); 
         position: fixed;

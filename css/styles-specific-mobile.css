@@ -156,7 +156,7 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 		width: 80%;
 	}
 
-	.cart-item-price {
+	.cart-item-price > span {
 		user-select: none;
 	}
 }

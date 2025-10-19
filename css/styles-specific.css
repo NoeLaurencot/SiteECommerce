@@ -326,7 +326,6 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 .cart-item-price > span:hover {
 	background: var(--secondary);
 	cursor: default;
-	user-select: all;
 }
 
 .cart-item-price > span:hover + .cart-item-price-detail {
