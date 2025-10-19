@@ -11,7 +11,6 @@
     --main: rgb(13, 20, 110);
     --secondary: rgb(87, 8, 130);
     --nav: linear-gradient(90deg, rgb(13, 20, 110) 0%, rgb(87, 8, 130) 100%);
-    --nav-burger: linear-gradient(135deg, rgba(13, 20, 110, 1) 0%, rgba(87, 8, 130, 1) 43%);
     --accent: rgb(217, 145, 30);
     --button-hover: rgb(76, 10, 111);
     --border: rgb(140, 140, 140);
@@ -80,6 +79,7 @@
         color: var(--white);
     }
 
+    /* Le menu hamburger */
     .nav-hamburger-menu {
         display: flex;
         flex-direction: column;
@@ -92,8 +92,7 @@
         z-index: 2000;
         width: 60vw;
         height: 100dvh;
-        /* Hauteur dynamique pour les mobiles */
-        height: 100vh;
+        /* Hauteur dynamique pour les mobiles *//* fallback */
         top: 0;
         right: -60%;
         opacity: 0;
@@ -123,6 +122,10 @@
     .nav-hamburger-icons {
         display: flex;
         gap: 10vw;
+        padding: 0 5vw;
+        border-radius: 10px;
+        background-color: var(--tile);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         align-items: center;
     }
 

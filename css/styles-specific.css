@@ -11,7 +11,6 @@
 	--main: rgb(13, 20, 110);
 	--secondary: rgb(87, 8, 130);
 	--nav: linear-gradient(90deg, rgb(13, 20, 110) 0%, rgb(87, 8, 130) 100%);
-	--nav-burger: linear-gradient(135deg, rgba(13, 20, 110, 1) 0%, rgba(87, 8, 130, 1) 43%);
 	--accent: rgb(217, 145, 30);
 	--button-hover: rgb(76, 10, 111);;
 	--border: rgb(140, 140, 140);
@@ -26,6 +25,10 @@
 
 body {
 	accent-color: var(--accent);
+}
+
+button {
+    font-family: "Host Grotesk", 'Arial Narrow Bold', sans-serif;
 }
 
 /* 
@@ -457,21 +460,27 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 }
 
 .cart-total-promo {
+	display: flex;
 	margin-bottom: 10px;
+	align-items: flex-end;
 }
 
 .cart-total-promo input[type="text"] {
-	width: 50%;
+	width: calc(100% - 20px);
 	min-width: 15%;
-	height: 20px;
-	padding: 5px;
+	height: 30px;
+	background-color: var(--border);
+	border: none;
+	padding: 5px 10px;
+	color: var(--white);
+	border-radius: 5px;
 	outline: none;
 }
 
 .cart-total-promo button {
 	border: none;
 	border-radius: 5px;
-	padding: 8px 10px;
+	padding: 10.5px 10px;
 	cursor: pointer;
 	color: var(--white);
 	background-color: var(--background-second);
@@ -512,6 +521,7 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 }
 
 .cart-total-checkout button:hover {
+	font-family: "H";
 	cursor: pointer;
 	color: var(--white);
 	font-weight: bold;
