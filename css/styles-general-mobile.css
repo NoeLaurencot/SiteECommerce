@@ -177,18 +177,18 @@
         color: var(--accent);
     }
 
-    .nav-hamburger button:focus-within .nav-hamburger-menu {
+    .nav-hamburger-toggle:focus-within .nav-hamburger-menu {
         right: 0;
         visibility: visible;
         opacity: 1;
     }
 
-    .nav-hamburger button:focus-within + .nav-hamburger-blur {
+    .nav-hamburger-toggle:focus-within + .nav-hamburger-blur {
         visibility: visible;
         opacity: 1;
     }
 
-    nav button:focus-within ~ .nav-hamburger-close {
+    .nav-hamburger-toggle:focus-within ~ .nav-hamburger-close {
         right: calc(60vw - 37px);
         visibility: visible;
     }
@@ -200,7 +200,7 @@
         width: 70vw;
     }
 
-    nav button:focus-within ~ .nav-hamburger-close {
+    .nav-hamburger-toggle:focus-within ~ .nav-hamburger-close {
         right: calc(70vw - 37px);
         visibility: visible;
     }
@@ -217,7 +217,7 @@
         width: 80vw;
     }
 
-    nav button:focus-within ~ .nav-hamburger-close {
+    .nav-hamburger-toggle:focus-within ~ .nav-hamburger-close {
         right: calc(80vw - 37px);
         visibility: visible;
     }

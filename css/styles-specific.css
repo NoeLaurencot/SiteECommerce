@@ -399,6 +399,8 @@ pour éviter les ambigüitées ex: .vente-article-container {}
   border-radius: 5px;
   width: 30px;
   border: solid 1px var(--border);
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
   appearance: textfield;
   padding: 5px;
   text-align: center;
