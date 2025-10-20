@@ -37,7 +37,7 @@
         font-size: 1.5rem;
     }
 
-    .content {
+    .content-container {
         margin-top: 124px;
     }
 }
@@ -48,10 +48,14 @@
         font-family: "Host Grotesk", 'Arial Narrow Bold', sans-serif;
     }
 
-    .content {
-        margin: 10px 10px;
-        margin-top: 90px;
+    .content-container {
         width: calc(100vw - 20px);
+        margin: 0 10px;
+        margin-top: 90px;
+    }
+
+    .content {
+        margin-bottom: 10px;
     }
 
     nav {
@@ -96,7 +100,7 @@
         justify-content: flex-start;
         gap: 1rem;
         box-sizing: border-box;
-        background-color: var(--background-second); 
+        background-color: var(--background-second);
         position: fixed;
         cursor: default;
         border-radius: 10px 0 0 10px;
@@ -105,7 +109,8 @@
         width: 60vw;
         height: 100dvh;
         /* Hauteur dynamique pour les mobiles */
-        height: 100vh ;/* fallback */
+        height: 100vh;
+        /* fallback */
         top: 0;
         right: -60%;
         opacity: 0;
