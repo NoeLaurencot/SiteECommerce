@@ -202,13 +202,21 @@ nav a:hover {
 
 /* || body */
 
+.content-container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: calc(100vw - 40px);
+    margin: 0 20px;
+    margin-top: 131px;
+}
+
 .content {
     display: flex;
-    width: calc(100vw - 40px);
+    width: 100%;
     /* toute la viewwidth - la marge * 2 */
     height: fit-content;
-    margin: 20px;
-    margin-top: 131px;
+    margin-bottom: 20px;
     border-radius: 10px;
     background-color: var(--background-second);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
