@@ -36,32 +36,7 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 /* Page Accueil */
 
-.index_main {
-    display: flex;
-    background-image: url("https://placehold.co/600x400 ");
-    margin: 20px;
-    margin-top: 131px;
-    height: 75dvh;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: 0.3s;
-    justify-content: center;
-    align-items: center;
 
-}
-.index_sub_main {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    height: 25%;
-    width: 75%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.index_flex_end {
-    justify-content: flex-end;
-    align-self: flex-end;
-}
 
 /* Page Vente */
 
