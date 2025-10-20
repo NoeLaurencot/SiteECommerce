@@ -159,6 +159,31 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	.cart-item-price > span {
 		user-select: none;
 	}
+
+	.cart-similar-img-container {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-x: scroll;
+		background-color: var(--tile);
+		padding: 10px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		border-radius: 10px;
+		width: calc(100% - 40px);
+		box-sizing: border-box;
+	}
+
+	.cart-similar-img {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 10px;
+	}
+
+	.cart-similar-img img {
+		width: clamp(150px, 30vw, 500px);
+		height: auto;
+		flex-shrink: 0;
+	}
 }
 
 

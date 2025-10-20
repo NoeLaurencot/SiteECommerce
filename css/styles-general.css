@@ -83,7 +83,10 @@ body {
     justify-content: center;
 }
 
-/* cursors */
+/* || Elements */
+
+/* cursor */
+
 .cursor-pointer {
     cursor: pointer;
 }
@@ -111,6 +114,24 @@ body {
 /* links */
 
 a {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+}
+
+/* button */
+
+button {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+}
+
+/* img */
+
+img {
+    user-select: none;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
     -webkit-touch-callout: none;
