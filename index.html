@@ -3,29 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon128-128.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-general.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles-specific.css">
+    <link rel="stylesheet" href="css/styles-general-mobile.css">
+    <link rel="stylesheet" href="css/styles-specific-mobile.css">
     <title>Accueil</title>
 </head>
 <header>
     <nav>
-            <span class="most-left">
-                <a class="logo" href="#"><img src="https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg" alt="logo"></a>
+            <span class="nav-left">
+                <a class="nav-logo" href="index.html"><img src="assets/logo.png" alt="logo"></a>
             </span>
-        <span>
-                <a class="selected" href="index.html">Accueil</a>
+        <span class="nav-middle">
+                <a href="index.html">Accueil</a>
                 <a href="vente.html">Boutique</a>
                 <a href="a_propos.html">À propos</a>
             </span>
-        <span class="most-right">
-                <a class="material-symbols-outlined" href="panier.html">shopping_cart</a>
-                <button>theme</button>
+        <span class="nav-right">
+                <a class="material-symbols-outlined selected-cart nav-icon" href="panier.html">shopping_cart</a>
+                <a class="material-symbols-outlined nav-icon" href="#">account_circle</a>
             </span>
+        <div class="nav-hamburger">
+            <button class="nav-hamburger-toggle">
+                <span class="material-symbols-outlined">menu</span>
+                <div class="nav-hamburger-menu">
+                    <div class="nav-hamburger-icons">
+                        <a class="material-symbols-outlined selected-cart nav-icon" href="panier.html">shopping_cart</a>
+                        <a class="material-symbols-outlined nav-icon" href="#">account_circle</a>
+                    </div>
+                    <div class="nav-hamburger-links">
+                        <a href="index.html">Accueil</a>
+                        <hr class="divider">
+                        <a href="vente.html">Boutique</a>
+                        <hr class="divider">
+                        <a href="a_propos.html">À propos</a>
+                    </div>
+                </div>
+            </button>
+            <div class="nav-hamburger-blur">
+            </div>
+            <span class="material-symbols-outlined nav-hamburger-close">close</span>
+        </div>
     </nav>
 </header>
 
 
+<main>
+    <section class="index_main">
+        <div class="index_sub_main">
+            <div>fdfdfdf</div>
+            <div class="index_flex_end">sfdsfdsfdsf</div>
+        </div>
+    </section>
+    <section>
+
+    </section>
+</main>
+
+
 <body>
-    
+<script src="scripts/nav-scroll.js"></script>
 </body>
 </html>
