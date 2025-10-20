@@ -35,7 +35,46 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 */
 
 /* Page Accueil */
+.index-promo {
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 0.5rem;
+    background-color: var(--accent);
+    max-width: 100%;
+    transition: 0.3s;
+}
+.index-promo>div {
+    display: inline-block;
+    gap : 0;
+    margin: 0.1rem;
+    width: max-content;
+    animation: slideLeft 10s linear infinite; /*On utilise l'animation slideLeft */
+}
+.index-promo>div>div {
+    display: flex;
+    justify-content: space-evenly;
+    white-space: nowrap;
+}
 
+.index-promo>div>div>span {
+    font-size: clamp(1.25rem, 2vw + 0.5rem, 2rem);
+    font-style: italic;
+    margin-right: 3rem;
+
+}
+@keyframes slideLeft { /*le mouvement va(from) de 0% a(to) -50% vers la gauche*/
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+.index-promo:hover {
+    transform: scaleY(1.1) scaleX(1.01);
+}
 
 
 /* Page Vente */
