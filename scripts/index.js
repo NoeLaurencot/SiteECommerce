@@ -9,7 +9,7 @@ function copyToClipboard() {
     addAlert("Code Promo copiée !"); // avec cette fonction les message sera appelée plusieurs fois si l'utilisateur spam clik
 }
 function isEmailRightSpelled (email) {
-    return /\S+@\S+\.\S+/.test(email)
+    return /\S+@\S+\.\S+/.test(email) //Test si l'email est dans le format *****@*****.****
 }
 function subscribeButton () {
     var email = document.getElementById('email').value;
@@ -19,7 +19,7 @@ function subscribeButton () {
         addAlert("L’adresse mail est erronée.");
     }
 }
-function addAlert(alertmsg) {
+function addAlert(alertmsg) { //fonction qui permet de cree l'alerte personnalisable
     const alert = document.createElement("div");
     const msg = document.createTextNode(alertmsg);
     alert.append(msg);
