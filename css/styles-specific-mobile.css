@@ -29,7 +29,34 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 */
 
 /* Page Accueil */
+@media (max-width: 1200px) {
+    .index-alert-active {
+        font-size: 0.8rem;
+    }
 
+    .index-alert-leaving {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .index-alert-active {
+        font-size: 0.5rem;
+    }
+
+    .index-alert-leaving {
+        font-size: 0.5rem;
+    }
+}
+@media (max-width: 500px) {
+    .index-alert-active {
+        font-size: 0.3rem;
+    }
+
+    .index-alert-leaving {
+        font-size: 0.3rem;
+    }
+}
 /* Page Vente */
 
 .vente-article-container {

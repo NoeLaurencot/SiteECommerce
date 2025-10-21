@@ -143,24 +143,20 @@
         </div>
     </section>
     <section class="content">
-        <fieldset class="index-form">
-            <legend><h1>Inscrivez-vous à notre newsletter :</h1>
-                <p>Ne manquez aucune nouveauté ! Recevez chaque semaine nos actualités, conseils exclusifs et offres
-                    spéciales directement dans votre boîte mail.</p>
-                <h2>👉 Entrez votre adresse e-mail ci-dessous :</h2></legend>
-            <div class="index-form-item">
-                <div>
-                    <label for="email">Adresse Email :</label>
-                </div>
-                <div>
-                    <input type="email" name="email" id="email" placeholder="E-mail address">
-                </div>
-                <div>
+        <div class="index-form-container">
+            <fieldset class="index-form">
+                <legend><h1>Inscrivez-vous à notre newsletter :</h1>
+                  Ne manquez aucune nouveauté ! Recevez chaque semaine nos actualités, conseils exclusifs et offres
+                        spéciales directement dans votre boîte mail.
+                    <h2>Entrez votre adresse e-mail ci-dessous :</h2></legend>
+                <div class="index-form-item">
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="Votre@email.com">
                     <label for="valid"></label>
-                    <input type="button" name="valid" id="valid" value="Je m'abonne">
+                    <input class="cursor-pointer" onclick="subscribeButton()" type="button" name="valid" id="valid" value="Je m'abonne">
                 </div>
-            </div>
         </fieldset>
+        </div>
     </section>
 </main>
 
@@ -177,7 +173,7 @@
         </div>
     </div>
 </footer>
-<script src="scripts/copyToClipboard.js"></script>
+<script src="scripts/index.js"></script>
 <script src="scripts/nav-scroll.js"></script>
 </body>
 </html>

@@ -127,10 +127,10 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 }
 .index-form {
     border: 0;
-    background-color: var(--tile);
 }
-.index-form-item>div>input[type="email"] {
+.index-form-item>input[type="email"] {
     height: 30px;
+
     background-color: var(--text-subtle);
     border: none;
     padding: 5px 10px;
@@ -138,36 +138,72 @@ pour éviter les ambigüitées ex: .vente-article-container {}
     border-radius: 5px;
     outline: none;
     width: 50%;
-    margin: 5px;
+    margin: 0 0 10px 0;
+    font-size: 100%;
 }
-.index-form-item>div>input[type="email"]:focus {
+.index-form-item>input[type="email"]:focus {
     border: 2px solid var(--accent);
-}
 
-.index-form-item>div>input[type="button"] {
+}
+.index-form-item>input[type="button"] {
     border: none;
     border-radius: 5px;
     padding: 10.5px 10px;
-    cursor: pointer;
     color: var(--white);
     background-color: var(--background-second);
-    font-size: 1em;
+    font-size: 1rem;
     transition: 0.3s;
 }
-.index-form-item>div>input[type="button"]:hover {
+.index-form-item>input[type="button"]:hover {
     background-color: var(--secondary);
 }
-
-.index-form-item>div {
+.index-form-item {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+
 }
-.index-form-item {
+.index-form-container {
+    font-size: clamp(0.1rem,1rem, 2rem);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    background-color: var(--tile);
+    padding: 20px;
+    margin: 10px 10px;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+.index-alert {
+    word-break: break-all;
+    display: flex;
+    position: fixed;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    padding: 10px;
+    top: 1%;
+    left: 35%;
+    width: 25%;
+    z-index: 99999;
+    font-size: 1.2rem;
+    background-image: linear-gradient(to right, var(--main), var(--secondary));
+}
+.index-alert-active {
+    animation: slideDown 0.5s linear;
+}
+.index-alert-leaving {
+    animation: slideUp 0.45s linear;
+
+}
+@keyframes slideDown {
+    from {transform: translateY(-60%)}
+    to   {transform: translateY(0%)}
+}
+@keyframes slideUp {
+    from {transform: translateY(0%)}
+    to   {transform: translateY(-110%)}
 }
 
 /* Page Vente */
