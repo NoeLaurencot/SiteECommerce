@@ -47,20 +47,20 @@ pour éviter les ambigüitées ex: .vente-article-container {}
     max-width: 100%;
     transition: 0.3s;
 }
-.index-promo>div {
-    display: inline-block;
+.index-promo>span {
+    display: flex;
     gap : 0;
     margin: 0.1rem;
     width: max-content;
     animation: slideLeft 10s linear infinite; /*On utilise l'animation slideLeft */
 }
-.index-promo>div>div {
+.index-promo>span>span {
     display: flex;
     justify-content: space-evenly;
     white-space: nowrap;
 }
 
-.index-promo>div>div>span {
+.index-promo>span>span>span {
     font-size: clamp(1.25rem, 2vw + 0.5rem, 2rem);
     font-style: italic;
     color: var(--white);

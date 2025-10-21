@@ -16,7 +16,7 @@ function subscribeButton () {
     if (isEmailRightSpelled(email)) {
         addAlert("Vous vous êtes inscrit avec : \"" + email + "\"");
     } else {
-        addAlert("L’adresse e-mail est erronée.");
+        addAlert("L’adresse mail est erronée.");
     }
 }
 function addAlert(alertmsg) {
@@ -30,6 +30,6 @@ function addAlert(alertmsg) {
         alert.className = ("index-alert-leaving index-alert");
         setTimeout(function(){
             document.getElementsByClassName("index-alert-leaving index-alert")[0].remove(); // on retire le premier element appellée
-        }, 400);
+        }, 400); // j'ai mis 4 seconde comme ceci l'animation a une marge de timeout
     }, 2000);
 }
