@@ -218,6 +218,50 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 		height: auto;
 		flex-shrink: 0;
 	}
+
+	/* À implémenter */
+
+	    .video-player {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        width: 90%;
+        height: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video-player-content {
+        position: relative;
+        width: 100vw;
+        padding: 1.5vw;
+        background-color: var(--background);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+
+    .video-player-content video {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+    }
+
+    .video-player-close {
+        position: absolute;
+        font-size: clamp(0.6rem, 7vw, 1.2rem);
+        padding: clamp(6px, 2.5vw, 12px);
+        top: -60px;
+        right: calc(5vw + 37%);
+        will-change: transform;
+    }
+
+    .video-player-close:hover {
+        cursor: pointer;
+    }
 }
 
 
