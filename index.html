@@ -55,8 +55,9 @@
 
 
 <main class="content-container">
+    <input type="hidden" value="J3SU1SP4UVR3" id="promoCode" class="index-promo-code" readonly>
     <section class="content">
-        <div class="index-promo cursor-pointer">
+        <button onclick="copyToClipboard()" class="index-promo cursor-pointer">
             <div>
                 <div>
                     <span>Promo + 50%</span>
@@ -71,7 +72,6 @@
                     <span>Promo + 50%</span>
                     <span>Promo + 50%</span>
                     <span>Promo + 50%</span>
-
                     <div>
                     </div>
                     <span>Promo + 50%</span>
@@ -88,7 +88,7 @@
                     <span>Promo + 50%</span>
                 </div>
             </div>
-        </div>
+        </button>
     </section>
     <section class="content">
         <div class="index-showoff">
@@ -96,14 +96,14 @@
 
             </div>
             <div class="index-showoff-content">
-                <div class="index-article">
+                <div class="index-article cursor-pointer">
                     <img src="https://placehold.co/600x400" alt="image">
                     <div class="index-article-info">
                         <span>Nom</span>
                         <span>Prix</span>
                     </div>
                 </div>
-                <div class="index-article">
+                <div class="index-article cursor-pointer">
 
                     <img src="https://placehold.co/600x400" alt="image">
                     <div class="index-article-info">
@@ -111,28 +111,28 @@
                         <span>Prix</span>
                     </div>
                 </div>
-                <div class="index-article">
+                <div class="index-article cursor-pointer">
                     <img src="https://placehold.co/600x400" alt="image">
                     <div class="index-article-info">
                         <span>Nom</span>
                         <span>Prix</span>
                     </div>
                 </div>
-                <div class="index-article">
+                <div class="index-article cursor-pointer">
                     <img src="https://placehold.co/600x400" alt="image">
                     <div class="index-article-info">
                         <span>Nom</span>
                         <span>Prix</span>
                     </div>
                 </div>
-                <div class="index-article">
+                <div class="index-article  cursor-pointer">
                     <img src="https://placehold.co/600x400" alt="image">
                     <div class="index-article-info">
                         <span>Nom</span>
                         <span>Prix</span>
                     </div>
                 </div>
-                <div class="index-article">
+                <div class="index-article cursor-pointer">
                     <img src="https://placehold.co/600x400" alt="image">
                     <div class="index-article-info">
                         <span>Nom</span>
@@ -143,6 +143,7 @@
         </div>
     </section>
     <section class="content">
+        <div></div>
         <fieldset class="index-form">
             <label for="email">Adresse Email :</label>
             <input type="email" name="email" id="email" placeholder="E-mail address">
@@ -163,6 +164,7 @@
         </div>
     </div>
 </footer>
+<script src="scripts/copyToClipboard.js"></script>
 <script src="scripts/nav-scroll.js"></script>
 </body>
 </html>

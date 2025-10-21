@@ -40,6 +40,7 @@ pour éviter les ambigüitées ex: .vente-article-container {}
     position: relative;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+    border: 0;
     padding: 0.5rem;
     background-color: var(--accent);
     width: 100%;
@@ -96,10 +97,9 @@ pour éviter les ambigüitées ex: .vente-article-container {}
     overflow-x: scroll;
     background-color: var(--tile);
     padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin: 10px 0;
     border-radius: 10px;
-    width: calc(100% - 40px);
+    width: 97.5% ;
     box-sizing: border-box;
     transition: 0.3s;
 }
@@ -107,7 +107,6 @@ pour éviter les ambigüitées ex: .vente-article-container {}
     width: 20vw;
     min-width: 20vw;
     height: auto;
-    flex-shrink: 0;
 }
 .index-article {
     display: flex;
