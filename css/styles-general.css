@@ -51,8 +51,6 @@ body {
 
 .selected-cart {
     color: var(--accent) !important;
-    border-bottom: solid 4px rgba(255, 255, 255, 0);
-    border-top: solid 4px rgba(255, 255, 255, 0);
     box-sizing: border-box;
 }
 
