@@ -84,10 +84,9 @@ pour éviter les ambigüitées ex: .vente-article-container {}
     flex-direction: column;
     align-items: center;
     width: 100%;
-}
-.index-showoff {
     overflow-x: scroll;
 }
+
 .index-article>img {
     height: 50%;
     width: 50% ;
@@ -127,13 +126,48 @@ pour éviter les ambigüitées ex: .vente-article-container {}
     transform: scale(1.1) scaleX(1.01);
 }
 .index-form {
-border: 0;
+    border: 0;
+    background-color: var(--tile);
 }
-.index-form>input {
-    transition: 0.7s;
+.index-form-item>div>input[type="email"] {
+    height: 30px;
+    background-color: var(--text-subtle);
+    border: none;
+    padding: 5px 10px;
+    color: var(--white);
+    border-radius: 5px;
+    outline: none;
+    width: 50%;
+    margin: 5px;
 }
-.index-form>input:focus {
-    padding: 5px;
+.index-form-item>div>input[type="email"]:focus {
+    border: 2px solid var(--accent);
+}
+
+.index-form-item>div>input[type="button"] {
+    border: none;
+    border-radius: 5px;
+    padding: 10.5px 10px;
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--background-second);
+    font-size: 1em;
+    transition: 0.3s;
+}
+.index-form-item>div>input[type="button"]:hover {
+    background-color: var(--secondary);
+}
+
+.index-form-item>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.index-form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Page Vente */
