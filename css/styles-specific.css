@@ -251,7 +251,8 @@ pour éviter les ambigüitées ex: .vente-article-container {}
   align-items: center;
 }
 
-.cart-list-tile img, .cart-similar img {
+.cart-list-tile img,
+.cart-similar img {
   width: 100%;
   height: auto;
 }
@@ -565,10 +566,16 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 .cart-similar-img img {
   width: 30vw;
-  min-width: 30vw;
   height: auto;
-  box-shadow: 0 4 8px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
 }
+
+.cart-similar-img img:hover {
+  transform: scale(1.03);
+
+}
+
 
 /* Page A Propos */
