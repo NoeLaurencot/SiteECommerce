@@ -14,18 +14,19 @@
     <link rel="stylesheet" href="css/styles-specific-mobile.css">
     <title>Accueil</title>
 </head>
+<body>
 <header>
     <nav>
             <span class="nav-left">
                 <a class="nav-logo" href="index.html"><img src="assets/logo.png" alt="logo"></a>
             </span>
         <span class="nav-middle">
-                <a href="index.html">Accueil</a>
+                <a class="selected" href="index.html">Accueil</a>
                 <a href="vente.html">Boutique</a>
                 <a href="a_propos.html">À propos</a>
             </span>
         <span class="nav-right">
-                <a class="material-symbols-outlined selected-cart nav-icon" href="panier.html">shopping_cart</a>
+                <a class="material-symbols-outlined nav-icon" href="panier.html">shopping_cart</a>
                 <a class="material-symbols-outlined nav-icon" href="#">account_circle</a>
             </span>
         <div class="nav-hamburger">
@@ -33,7 +34,7 @@
                 <span class="material-symbols-outlined">menu</span>
                 <div class="nav-hamburger-menu">
                     <div class="nav-hamburger-icons">
-                        <a class="material-symbols-outlined selected-cart nav-icon" href="panier.html">shopping_cart</a>
+                        <a class="material-symbols-outlined nav-icon" href="panier.html">shopping_cart</a>
                         <a class="material-symbols-outlined nav-icon" href="#">account_circle</a>
                     </div>
                     <div class="nav-hamburger-links">
@@ -54,13 +55,116 @@
 
 
 <main class="content-container">
-    <section>
+    <input type="hidden" value="J3SU1SP4UVR3" id="promoCode" class="index-promo-code" readonly>
+    <section class="content">
+        <button onclick="copyToClipboard()" class="index-promo cursor-pointer">
+            <div>
+                <div>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <div>
+                    </div>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                    <span>Promo + 50%</span>
+                </div>
+            </div>
+        </button>
+    </section>
+    <section class="content">
+        <div class="index-showoff">
+            <div class="index-showoff-title">
 
+            </div>
+            <div class="index-showoff-content">
+                <div class="index-article cursor-pointer">
+                    <img src="https://placehold.co/600x400" alt="image">
+                    <div class="index-article-info">
+                        <span>Nom</span>
+                        <span>Prix</span>
+                    </div>
+                </div>
+                <div class="index-article cursor-pointer">
+
+                    <img src="https://placehold.co/600x400" alt="image">
+                    <div class="index-article-info">
+                        <span>Nom</span>
+                        <span>Prix</span>
+                    </div>
+                </div>
+                <div class="index-article cursor-pointer">
+                    <img src="https://placehold.co/600x400" alt="image">
+                    <div class="index-article-info">
+                        <span>Nom</span>
+                        <span>Prix</span>
+                    </div>
+                </div>
+                <div class="index-article cursor-pointer">
+                    <img src="https://placehold.co/600x400" alt="image">
+                    <div class="index-article-info">
+                        <span>Nom</span>
+                        <span>Prix</span>
+                    </div>
+                </div>
+                <div class="index-article  cursor-pointer">
+                    <img src="https://placehold.co/600x400" alt="image">
+                    <div class="index-article-info">
+                        <span>Nom</span>
+                        <span>Prix</span>
+                    </div>
+                </div>
+                <div class="index-article cursor-pointer">
+                    <img src="https://placehold.co/600x400" alt="image">
+                    <div class="index-article-info">
+                        <span>Nom</span>
+                        <span>Prix</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div></div>
+        <fieldset class="index-form">
+            <label for="email">Adresse Email :</label>
+            <input type="email" name="email" id="email" placeholder="E-mail address">
+        </fieldset>
     </section>
 </main>
 
 
-<body>
+<footer>
+    <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.png" alt="logo"></a>
+    </div>
+    <div>
+        <div class="auteur-info">
+            <h3>Auteur</h3>
+            <p>Pierre LAMOUR</p>
+            <p>Étudiant BUT Informatique</p>
+        </div>
+    </div>
+</footer>
+<script src="scripts/copyToClipboard.js"></script>
 <script src="scripts/nav-scroll.js"></script>
 </body>
 </html>
