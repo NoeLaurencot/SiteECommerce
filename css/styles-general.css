@@ -11,7 +11,6 @@
     --main: rgb(13, 20, 110);
     --secondary: rgb(87, 8, 130);
     --nav: linear-gradient(90deg, rgb(13, 20, 110) 0%, rgb(87, 8, 130) 100%);
-    --nav-burger: linear-gradient(135deg, rgba(13, 20, 110, 1) 0%, rgba(87, 8, 130, 1) 43%);
     --accent: rgb(217, 145, 30);
     --button-hover: rgb(76, 10, 111);
     --border: rgb(140, 140, 140);
@@ -33,6 +32,7 @@ body {
     color: var(--white);
     position: relative;
     accent-color: var(--accent);
+    overflow-x: hidden;
 }
 
 /* Pour faire en sorte que le footer reste collé en bas de page */
@@ -51,8 +51,6 @@ body {
 
 .selected-cart {
     color: var(--accent) !important;
-    border-bottom: solid 4px rgba(255, 255, 255, 0);
-    border-top: solid 4px rgba(255, 255, 255, 0);
     box-sizing: border-box;
 }
 
@@ -67,9 +65,12 @@ body {
     user-select: all !important;
 }
 
-/* désactive la sélection pour les symboles google */
+/* désactive la sélection et highlight pour les symboles google */
 .material-symbols-outlined {
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
 }
 
 .no-margin {
@@ -80,7 +81,10 @@ body {
     justify-content: center;
 }
 
-/* cursors */
+/* || Elements */
+
+/* cursor */
+
 .cursor-pointer {
     cursor: pointer;
 }
@@ -102,6 +106,33 @@ body {
 
 .text-justify-right {
     text-align: right;
+}
+
+
+/* links */
+
+a {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+}
+
+/* button */
+
+button {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+}
+
+/* img */
+
+img {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
 }
 
 /* || Navbar */
@@ -190,13 +221,21 @@ nav a:hover {
 
 /* || body */
 
+.content-container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: calc(100vw - 40px);
+    margin: 0 20px;
+    margin-top: 131px;
+}
+
 .content {
     display: flex;
-    width: calc(100vw - 40px);
+    width: 100%;
     /* toute la viewwidth - la marge * 2 */
     height: fit-content;
-    margin: 20px;
-    margin-top: 131px;
+    margin-bottom: 20px;
     border-radius: 10px;
     background-color: var(--background-second);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -213,11 +252,11 @@ nav a:hover {
     position: relative;
 }
 
-.divider{
-	width: 80%;
-	border: none;
-	border-top: solid 1px var(--border);
-	margin: 0;
+.divider {
+    width: 80%;
+    border: none;
+    border-top: solid 1px var(--border);
+    margin: 0;
 }
 
 

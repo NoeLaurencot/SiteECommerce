@@ -11,7 +11,6 @@
     --main: rgb(13, 20, 110);
     --secondary: rgb(87, 8, 130);
     --nav: linear-gradient(90deg, rgb(13, 20, 110) 0%, rgb(87, 8, 130) 100%);
-    --nav-burger: linear-gradient(135deg, rgba(13, 20, 110, 1) 0%, rgba(87, 8, 130, 1) 43%);
     --accent: rgb(217, 145, 30);
     --button-hover: rgb(76, 10, 111);
     --border: rgb(140, 140, 140);
@@ -38,7 +37,7 @@
         font-size: 1.5rem;
     }
 
-    .content {
+    .content-container {
         margin-top: 124px;
     }
 }
@@ -49,10 +48,14 @@
         font-family: "Host Grotesk", 'Arial Narrow Bold', sans-serif;
     }
 
-    .content {
-        margin: 10px 10px;
-        margin-top: 90px;
+    .content-container {
         width: calc(100vw - 20px);
+        margin: 0 10px;
+        margin-top: 90px;
+    }
+
+    .content {
+        margin-bottom: 10px;
     }
 
     nav {
@@ -78,12 +81,25 @@
         cursor: pointer;
         font-size: 2rem;
         color: var(--white);
+        transition: 0.3s;
+        /* Pour eviter que ça sélectionne quand on appuie sur mobile */
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        -webkit-touch-callout: none;
     }
 
+    .nav-hamburger-toggle:hover {
+        color: var(--accent);
+    }
+
+    /* Le menu hamburger */
     .nav-hamburger-menu {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        box-sizing: border-box;
         background-color: var(--background-second);
         position: fixed;
         cursor: default;
@@ -94,6 +110,7 @@
         height: 100dvh;
         /* Hauteur dynamique pour les mobiles */
         height: 100vh;
+        /* fallback */
         top: 0;
         right: -60%;
         opacity: 0;
@@ -123,6 +140,10 @@
     .nav-hamburger-icons {
         display: flex;
         gap: 10vw;
+        padding: 0 5vw;
+        border-radius: 10px;
+        background-color: var(--tile);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         align-items: center;
     }
 
@@ -131,11 +152,13 @@
         background-color: rgba(0, 0, 0, 0);
         position: fixed;
         z-index: 1000;
-        backdrop-filter: blur(1px);
+        backdrop-filter: blur(2px);
         width: 100%;
         height: 100dvh;
         top: 0;
-        right: -200%;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
         transition: 0.5s ease;
     }
 
@@ -154,17 +177,18 @@
         color: var(--accent);
     }
 
-    .nav-hamburger button:focus-within .nav-hamburger-menu {
+    .nav-hamburger-toggle:focus-within .nav-hamburger-menu {
         right: 0;
         visibility: visible;
         opacity: 1;
     }
 
-    .nav-hamburger button:focus-within + .nav-hamburger-blur {
-        right: 0;
+    .nav-hamburger-toggle:focus-within + .nav-hamburger-blur {
+        visibility: visible;
+        opacity: 1;
     }
 
-    nav button:focus-within ~ .nav-hamburger-close {
+    .nav-hamburger-toggle:focus-within ~ .nav-hamburger-close {
         right: calc(60vw - 37px);
         visibility: visible;
     }
@@ -176,7 +200,7 @@
         width: 70vw;
     }
 
-    nav button:focus-within ~ .nav-hamburger-close {
+    .nav-hamburger-toggle:focus-within ~ .nav-hamburger-close {
         right: calc(70vw - 37px);
         visibility: visible;
     }
@@ -193,7 +217,7 @@
         width: 80vw;
     }
 
-    nav button:focus-within ~ .nav-hamburger-close {
+    .nav-hamburger-toggle:focus-within ~ .nav-hamburger-close {
         right: calc(80vw - 37px);
         visibility: visible;
     }
