@@ -201,7 +201,7 @@ pour éviter les ambigüitées ex: .vente-article-container {}
     z-index: 99999;
     font-size: 1.2rem;
     background-image: linear-gradient(to right, var(--main), var(--secondary));
-    transition: 0.5s;
+    transition: opacity 0.5s;
     opacity: 0;
 }
 .index-alert-active {
@@ -230,25 +230,44 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	flex-direction: column;
 } */
 
+body {
+  --slider-color: #323232;
+  --article-background-dark-color: #444;
+  --article-background-hover-dark-color: #888;
+  --buy-panier-color: #44f;
+  --buy-panier-hover-color: #88f;
+}
+
+.vente-content {
+  flex-direction: column;
+    text-align: center;
+}
+
 .vente-article-section {
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  max-height: 2000px;
   display: flex;
   flex-wrap: wrap;
+  overflow: auto;
   justify-content: space-evenly;
   gap: 20px;
 }
 
 .vente-article-container {
-  background-color: #888;
+  background-color: var(--article-background-dark-color);
   border-radius: 8px;
-  border: 3px solid #444;
+  border: 3px solid var(--article-background-hover-dark-color);
 
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
+  transition: 0.3s;
+
 }
 
 .vente-article-container:hover {
-  background-color: #444;
-  transition: 0.3s;
+  background-color: var(--article-background-hover-dark-color);
 }
 
 .vente-article-container > * {
@@ -257,7 +276,20 @@ pour éviter les ambigüitées ex: .vente-article-container {}
   margin-right: 5%;
 }
 
-.vente-article-container > div {
+.vente-seven-row > div > img{
+  width: 0px;
+  height: 0px;
+}
+
+.vente-seven-row > p {
+  display: none;
+}
+
+.vente-seven-row > span {
+  display: none;
+}
+
+.vente-article-container > div{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -274,11 +306,11 @@ pour éviter les ambigüitées ex: .vente-article-container {}
   height: 65%;
 }
 
-.vente-article-container > p {
+.vente-article-container > p{
   margin-top: 5%;
 }
 
-.vente-article-container > span {
+.vente-article-container > span{
   display: flex;
   margin-top: 5%;
 }
@@ -298,18 +330,18 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 }
 
 .vente-panier {
-  background-color: #44f;
+  background-color: var(--buy-panier-color);
   color: white;
 }
 
 .vente-panier:hover {
-  background-color: #88f;
+  background-color: var(--buy-panier-hover-color);
 }
 
 .vente-description {
   position: relative;
-  display: inline-block;
-  cursor: pointer;
+    display: inline-block;
+    cursor: pointer;
   margin-left: auto;
 }
 
@@ -317,7 +349,7 @@ pour éviter les ambigüitées ex: .vente-article-container {}
   visibility: hidden;
   width: 160px;
   background-color: #555;
-  color: #fff;
+  color: white;
   text-align: center;
   border-radius: 6px;
   padding: 8px 0;
@@ -331,7 +363,7 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 .vente-description .vente-show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
+  animation: fadeIn 1s
 }
 
 .vente-sussy-section {
@@ -340,35 +372,35 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 }
 
 #vente-slider {
-  -webkit-appearance: none;
-  padding: 0;
-  font: inherit;
-  outline: none;
-  color: #323232;
-  background: #323232;
-  box-sizing: border-box;
-  transition: opacity 0.2s;
-  cursor: pointer;
+    -webkit-appearance: none;     
+    padding: 0;                   
+    font: inherit;                
+    outline: none;
+    color: var(--slider-color);                  
+    background: var(--slider-color);             
+    box-sizing: border-box;  
+    transition: opacity .2s;
+    cursor: pointer;
 }
 
 #vente-slider::-moz-range-track {
-  height: 50%;
-  border: none;
-  border-radius: 0;
-  background-color: transparent;
+    height: 50%;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
 }
 
 #vente-slider::-moz-range-thumb {
-  width: 3em;
-  height: 3em;
-  border: none;
-  border-radius: 0;
-  background: currentColor;
+    width: 3em;
+    height: 3em;                
+    border: none;                   
+    border-radius: 0;               
+    background: currentColor;
 }
 
 #vente-slider::-moz-range-progress {
-  height: 0;
-  background: transparent;
+    height: 0;
+    background: transparent;        
 }
 
 /*/// Page Panier ///*/
