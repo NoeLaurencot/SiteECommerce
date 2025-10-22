@@ -745,5 +745,199 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 }
 
+/* --- SECTION À PROPOS (mise en page en deux colonnes) --- */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* pour les petits écrans */
+    gap:20px;
+    width: 60%;
+    padding: 40px;
+}
 
-/* Page A Propos */
+/* Bloc texte à gauche */
+.intro div:first-child {
+    flex: 1;
+    min-width: 340px;
+    text-align: left;
+}
+
+/* Titre et textes */
+.intro h1 {
+    font-size: 2em;
+    color: var(--white); 
+}
+
+.intro p {
+    color: #fff; /* texte blanc */
+}
+
+.intro-image {
+display: flex;
+align-items: center;
+padding-right: 20px;
+}
+
+.intro-image img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.intro-image img:hover {
+    transform: scale(1.03);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro div:first-child {
+        text-align: center;
+    }
+
+    .intro-image {
+        text-align: center;
+    }
+}
+
+
+/* === Section Histoire + Équipe regroupée === */
+.histoire-equipe {
+    background-color: #2b2b2b; /* ✅ même fond que "À propos de nous" */
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center; /* ✅ centre le titre et le texte uniquement */
+}
+
+.histoire-equipe h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.histoire-equipe p {
+    max-width: 750px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* ✅ On ne touche pas à l'alignement des photos */
+.histoire-equipe .team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.histoire-equipe .member {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 180px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.histoire-equipe {
+    background-color: #2b2b2b;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 20px; /* ✅ Espace réduit pour une meilleure continuité visuelle */
+}
+
+
+
+/* === Section Contact === */
+.contact {
+    background-color: #2b2b2b; /* ✅ même fond que la section À propos */
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+
+/* Titre */
+.contact .section-heading {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #b28fff;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.contact .section-heading::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #b28fff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Formulaire centré */
+.contact .form-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #1f1f1f; /* ✅ légèrement plus foncé pour contraster */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(178, 143, 255, 0.15);
+    text-align: left;
+}
+
+/* Labels */
+.input-group label {
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Champs du formulaire */
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    border: 1px solid #b28fff;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #2b2b2b;
+    margin-bottom: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #9b5eff;
+    box-shadow: 0 0 8px rgba(155, 94, 255, 0.6);
+    outline: none;
+}
+
+/* Bouton envoyer */
+.action-btn {
+    display: inline-block;
+    background-color: #9b5eff;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #7a3fe0;
+    box-shadow: 0 0 10px rgba(178, 143, 255, 0.6);
+}

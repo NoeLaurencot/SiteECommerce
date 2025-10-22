@@ -2,184 +2,20 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos</title>
     <link rel="shortcut icon" href="assets/favicon128-128.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-general.css">
+    <link rel="stylesheet" href="css/styles-specific.css">
     <link rel="stylesheet" href="css/styles-general-mobile.css">
+    <link rel="stylesheet" href="css/styles-specific-mobile.css">
 
-    <style>
-        /* --- CSS spécifique à cette page --- */
-
-        body {
-            font-family: "Host Grotesk", sans-serif;
-        }
-
-        main section {
-            text-align: center;
-            margin-top: 30px; /* Réduction de l’espace vertical entre les sections */
-        }
-
-        /* Décaler "À propos de nous" pour qu’il ne soit pas masqué */
-        .intro {
-            margin-top: 80px;
-        }
-
-        /* Titres en noir */
-        main section h1,
-        main section h2,
-        label,
-        .action-btn {
-            color: #000;
-        }
-
-        /* Autres textes en blanc */
-        main section p,
-        main section li {
-            color: #fff;
-        }
-
-        .intro ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .intro li {
-            margin: 4px 0;
-        }
-
-        /* Organisation : texte + image */
-        .intro {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .intro div {
-            flex: 1;
-            min-width: 280px;
-        }
-
-        .intro-image img {
-            width: 320px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease;
-        }
-
-        .intro-image img:hover {
-            transform: scale(1.05);
-        }
-
-        .histoire-equipe p,
-        .about-us p {
-            max-width: 800px;
-            margin: 8px auto; /* Réduction de l’espace entre les paragraphes */
-            line-height: 1.5;
-        }
-
-        /* Avatars de l'équipe */
-        .team {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            margin-top: 15px;
-        }
-
-        .team .member img {
-            border-radius: 50%;
-            width: 130px;
-            height: 130px;
-            object-fit: cover;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .team .member img:hover {
-            transform: scale(1.05);
-        }
-
-        .team .member h3 {
-            color: #fff;
-            margin-top: 8px;
-            font-size: 1.1em;
-            font-weight: 600;
-        }
-
-        .team .member p {
-            color: #ddd;
-            font-size: 0.95em;
-        }
-
-        /* Section contact */
-        .contact .main-container {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact h2 {
-            margin-bottom: 8px; /* Rapproche "Contactez-nous" et le texte */
-        }
-
-        .contact .intro {
-            font-style: italic;
-            margin-top: 0;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        .form-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .input-group {
-            text-align: left;
-        }
-
-        .input-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .input-group input,
-        .input-group textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 10px;
-            border: none;
-            outline: none;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            font-size: 1em;
-        }
-
-        .action-btn {
-            background-color: #fff;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-
-        .action-btn:hover {
-            background-color: #ddd;
-        }
-    </style>
+    <title>À propos</title>
 </head>
 
 <body>
@@ -202,7 +38,8 @@
                     <span class="material-symbols-outlined">menu</span>
                     <div class="nav-hamburger-menu">
                         <div class="nav-hamburger-icons">
-                            <a class="material-symbols-outlined selected-cart nav-icon" href="panier.html">shopping_cart</a>
+                            <a class="material-symbols-outlined selected-cart nav-icon"
+                                href="panier.html">shopping_cart</a>
                             <a class="material-symbols-outlined nav-icon" href="#">account_circle</a>
                         </div>
                         <div class="nav-hamburger-links">
@@ -219,97 +56,65 @@
             </div>
         </nav>
     </header>
-
-    <main>
-        <section class="intro">
-            <div>
+    <main class="content-container">
+        <section class="content">
+            <div class="intro">
                 <h1>À propos de nous</h1>
                 <p>
-                    Bienvenue  <strong>a notre site</strong> — un site e-commerce pas comme les autres,
-                    créé pour ceux qui aiment les choses surprenantes, drôles ou complètement absurdes !
+                    Bienvenue <strong>a notre site</strong> Nonsense Market ,
+                    créé pour apporter un peu d’humour dans la vie de nos clients.
+                    Nous croyons qu’un objet n’a pas besoin d’être pratique pour être attachant.
                 </p>
                 <p>
-                    Nous proposons des produits du quotidien qui ne servent pas à grand-chose…
-                    mais qui donnent toujours le sourire :
+                    Nous proposons des produits du quotidien qui ne servent pas à grand-chose,
+                    mais qui donnent toujours le sourire.
+                    Tous nos produits sont imaginés avec soin et un brin de folie.
+                    Nous travaillons avec des artisans et des créateurs indépendants qui partagent notre goût du décalé.
+                    Nos entrepôts sont basés en France, et nous livrons dans toute l’Europe avec le sourire
                 </p>
-                <ul>
-                      <li>Frigo qui chauffe</li>
-            <li>Voiture à axe inversé</li>
-            <li>Casserole isotherme</li>
-            <li>Porte soudée qui s'ouvre pas</li>
-            <li>Parapluie avec des trous</li>
-            <li>Chargeur qui aspire l'énergie</li>
-            <li>Clé USB en RAM</li>
-            <li>Vélo sans pédales reliées</li>
-            <li>Cybertruck (oui, c’est inutile 😭)</li>
-            <li>Balance imprécise ±30 kg</li>
-            <li>Caméra qui filme que quand y’a rien</li>
-            <li>Kit de tournevis identiques</li>
-            <li>Adaptateur USB-C vers USB-C</li>
-            <li>Sac à dos sans fond</li>
-            <li>Thermomètre en Kelvin</li>
-            <li>Bougies électriques à durée limitée</li>
-                </ul>
             </div>
 
             <div class="intro-image">
-                <img src="https://cdn.pixabay.com/photo/2020/05/11/21/24/funny-5162268_1280.jpg"
-                    alt="Illustration d’objets inutiles et amusants">
+                <img src="assets/logo.png" alt="logo">
             </div>
         </section>
 
         <section class="histoire-equipe">
-    <h2>Notre histoire & notre équipe</h2>
-    <p>
-        Quand nous avons créé <strong>Les Objets Inutiles</strong> en <strong>2021</strong>, 
-        nous étions quatre amis unis par une même passion : 
-        le design original et l’humour décalé. 
-        Notre aventure a commencé autour d’un simple défi : 
-        donner vie à des objets à la fois drôles, beaux et… totalement inutiles !
-    </p>
+            <h2>Notre histoire & notre équipe</h2>
+            <p>
+                Quand nous avons decidé de créer notre site <strong>Nonsense Market</strong> en <strong>2021</strong>,
+                nous étions quatre amis unis par une même passion :
+                le design original et l’humour décalé.
+                Notre aventure a commencé autour d’un simple défi :
+                donner vie à des objets à la fois drôles, beaux et totalement inutiles.
+            </p>
 
             <div class="team">
                 <div class="member">
-                    <img src="https://cdn.pixabay.com/photo/2021/02/18/19/01/avatar-6027310_1280.png" alt="Pierre Lamour">
+                    <img src="https://ibarry1.jpg" alt="Pierre Lamour">
                     <h3>Pierre Lamour</h3>
                     <p>Co-fondateur & Créatif en chef</p>
                 </div>
 
                 <div class="member">
-                    <img src="https://cdn.pixabay.com/photo/2021/02/18/18/58/avatar-6027305_1280.png" alt="Jules Jeanrot">
+                    <img src="https://ibarry2.jpg" alt="Jules Jeanrot">
                     <h3>Jules Jeanrot</h3>
                     <p>Co-fondateur & Responsable technique</p>
                 </div>
 
                 <div class="member">
-                    <img src="https://cdn.pixabay.com/photo/2021/02/18/18/59/avatar-6027307_1280.png" alt="Noé Laurençot">
+                    <img src="https://ibarry3.jpg" alt="Noé Laurençot">
                     <h3>Noé Laurençot</h3>
                     <p>Co-fondateur & Chargé de communication</p>
                 </div>
 
                 <div class="member">
-                    <img src="https://cdn.pixabay.com/photo/2021/02/18/19/00/avatar-6027309_1280.png" alt="Idrissa Barry">
+                    <img src="https://ibarry4.jpg" alt="Idrissa Barry">
                     <h3>Idrissa Barry</h3>
                     <p>Co-fondateur & Stratège de marque</p>
                 </div>
             </div>
         </section>
-
-        <section class="about-us">
-        <h2>Ce qu’il faut savoir sur nous</h2>
-        <p>
-            Notre objectif est simple : apporter un peu d’humour dans la vie de nos clients.
-            Nous croyons qu’un objet n’a pas besoin d’être pratique pour être attachant.
-        </p>
-        <p>
-            Tous nos produits sont imaginés avec soin et un brin de folie.
-            Nous travaillons avec des artisans et des créateurs indépendants qui partagent notre goût du décalé.
-        </p>
-        <p>
-            Nos entrepôts sont basés en France, et nous livrons dans toute l’Europe avec le sourire (et un peu d’ironie).
-        </p>
-    </section>
-
         <section id="contact" class="contact">
             <div class="main-container">
                 <h2>Contactez-nous</h2>
@@ -328,7 +133,8 @@
 
                     <div class="input-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message..."
+                            required></textarea>
                     </div>
 
                     <button type="submit" class="action-btn">Envoyer</button>
@@ -336,6 +142,21 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <div>
+            <a class="footer-logo" href="index.html"><img src="assets/logo.png" alt=""></a>
+        </div>
+        <div>
+            <div class="auteur-info">
+                <h3>Auteur</h3>
+                <p>Idrissa Barry</p>
+                <p>Étudiant BUT Informatique</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/nav-scroll.js"></script>
 </body>
 
 </html>
