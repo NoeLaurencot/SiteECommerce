@@ -12,127 +12,149 @@
 	<link href="css/styles-general-mobile.css" rel="stylesheet">
 	<link href="css/styles-specific.css" rel="stylesheet">
 	<link href="css/styles-specific-mobile.css" rel="stylesheet">
-	<title>Vente</title>
+	<title>Boutique</title>
 </head>
 
 <body>
 	<header>
-        <nav>
-            <span class="most-left">
+    <nav>
+            <span class="nav-left">
                 <a class="nav-logo" href="index.html"><img src="assets/logo.png" alt="logo"></a>
             </span>
-            <span>
+        <span class="nav-middle">
                 <a href="index.html">Accueil</a>
-                <a href="vente.html">Boutique</a>
+                <a class="selected" href="vente.html">Boutique</a>
                 <a href="a_propos.html">À propos</a>
             </span>
-            <span class="most-right">
-                <a class="material-symbols-outlined selected-cart nav-icon" href="panier.html">shopping_cart</a>
+        <span class="nav-right">
+                <a class="material-symbols-outlined nav-icon" href="panier.html">shopping_cart</a>
                 <a class="material-symbols-outlined nav-icon" href="#">account_circle</a>
             </span>
-        </nav>
-    </header>
+        <div class="nav-hamburger">
+            <button class="nav-hamburger-toggle">
+                <span class="material-symbols-outlined">menu</span>
+                <div class="nav-hamburger-menu">
+                    <div class="nav-hamburger-icons">
+                        <a class="material-symbols-outlined nav-icon" href="panier.html">shopping_cart</a>
+                        <a class="material-symbols-outlined nav-icon" href="#">account_circle</a>
+                    </div>
+                    <div class="nav-hamburger-links">
+                        <a href="index.html">Accueil</a>
+                        <hr class="divider">
+                        <a href="vente.html">Boutique</a>
+                        <hr class="divider">
+                        <a href="a_propos.html">À propos</a>
+                    </div>
+                </div>
+            </button>
+            <div class="nav-hamburger-blur">
+            </div>
+            <span class="material-symbols-outlined nav-hamburger-close">close</span>
+        </div>
+    </nav>
+</header>
 
-    <main class="content">
+    <main class="content-container">
+    <div class="content vente-content">
     	<h1>Acheter des articles d'utilité publique</h1>
-    	<section class="vente-article-section">
+    	<section class="vente-article-section" id="vente-article">
 
     		<!-- Row1 -->
 
 			<div class="vente-article-container" id="vente-1">
 				<div>
-					Nom article
-					<img class="vente-article-image" src="https://placehold.co/600x400">
+					Adaptateur USB C
+					<img class="vente-article-image" src="assets/usb_c_c.jpg">
 				</div>
-				<p>25 €</p>
+				<p>5 €</p>
 				<span>
 					<button class="vente-panier vente-button">Ajouter au panier</button>
 					<button class="vente-description vente-button" onclick="showDescription('vente-item1')">Description
-						<span class="vente-popup" id="vente-item1">Description</span>
+						<span class="vente-popup" id="vente-item1">Utile pour étendre la portée d'un câble usb c de 1cm.</span>
 					</button>
 				</span>
 			</div>
 
 			<div class="vente-article-container" id="vente-2">
 				<div>
-					Nom article
-					<img class="vente-article-image" src="https://placehold.co/600x400">
+					Boîte de tournevis
+					<img class="vente-article-image" src="assets/tournevis.jpg">
 				</div>
-				<p>25 €</p>
+				<p>30 €</p>
 				<span>
 					<button class="vente-panier vente-button">Ajouter au panier</button>
 					<button class="vente-description vente-button" onclick="showDescription('vente-item2')">Description
-						<span class="vente-popup" id="vente-item2">Description</span>
+						<span class="vente-popup" id="vente-item2">Vous pourrez choisir votre tournevis préféré pour tourner un seul type de vis.</span>
 					</button>
 				</span>
 			</div>
 
 			<div class="vente-article-container" id="vente-3">
 				<div>
-					Nom article
-					<img class="vente-article-image" src="https://placehold.co/600x400">
+					Parapluie
+					<img class="vente-article-image" src="assets/parapluie.jpg">
 				</div>
-				<p>25 €</p>
+				<p>12 €</p>
 				<span>
 					<button class="vente-panier vente-button">Ajouter au panier</button>
 					<button class="vente-description vente-button" onclick="showDescription('vente-item3')">Description
-						<span class="vente-popup" id="vente-item3">Description</span>
+						<span class="vente-popup" id="vente-item3">Il semble que ces parapluies ont rencontré des problèmes, mais bon ils peuvent encore servir ...</span>
 					</button>
 				</span>
 			</div>
 
 			<div class="vente-article-container" id="vente-4">
 				<div>
-					Nom article
-					<img class="vente-article-image" src="https://placehold.co/600x400">
+					Déchargeur
+					<img class="vente-article-image" src="assets/déchargeur.jpg">
 				</div>
-				<p>25 €</p>
+				<p>20 €</p>
 				<span>
 					<button class="vente-panier vente-button">Ajouter au panier</button>
 					<button class="vente-description vente-button" onclick="showDescription('vente-item4')">Description
-						<span class="vente-popup" id="vente-item4">Description</span>
+						<span class="vente-popup" id="vente-item4">Redirige l'énergie de l'appareil vers le secteur. Au cas où vous avez trop de batterie.</span>
 					</button>
 				</span>
 			</div>
 
 			<div class="vente-article-container" id="vente-5">
 				<div>
-					Nom article
+					Voiture inversée
 					<img class="vente-article-image" src="https://placehold.co/600x400">
 				</div>
-				<p>25 €</p>
+				<p>4000 €</p>
 				<span>
 					<button class="vente-panier vente-button">Ajouter au panier</button>
 					<button class="vente-description vente-button" onclick="showDescription('vente-item5')">Description
-						<span class="vente-popup" id="vente-item5">Description</span>
+						<span class="vente-popup" id="vente-item5">6 vitesses pour la marche arrière, 1 pour l'avant. Si vous trouvez que la vitre avant offre moins de visibilité que les rétros.</span>
 					</button>
 				</span>
 			</div>
 
 			<div class="vente-article-container" id="vente-6">
 				<div>
-					Nom article
-					<img class="vente-article-image" src="https://placehold.co/600x400">
+					Porte soudée
+					<img class="vente-article-image" src="assets/porte.jpg">
 				</div>
-				<p>25 €</p>
+				<p>150 €</p>
 				<span>
 					<button class="vente-panier vente-button">Ajouter au panier</button>
 					<button class="vente-description vente-button" onclick="showDescription('vente-item6')">Description
-						<span class="vente-popup" id="vente-item6">Description</span>
+						<span class="vente-popup" id="vente-item6">Au moins, la maison est plus sécurisée. Le soudage se fait sur place.</span>
 					</button>
 				</span>
 			</div>
 
 			<div class="vente-article-container" id="vente-7">
 				<div>
-					Nom article
+					Vélo
 					<img class="vente-article-image" src="https://placehold.co/600x400">
 				</div>
-				<p>25 €</p>
+				<p>80 €</p>
 				<span>
 					<button class="vente-panier vente-button">Ajouter au panier</button>
 					<button class="vente-description vente-button" onclick="showDescription('vente-item7')">Description
-						<span class="vente-popup" id="vente-item7">Description</span>
+						<span class="vente-popup" id="vente-item7">La chaîne de transmission est manquante. Utile si</span>
 					</button>
 				</span>
 			</div>
@@ -338,6 +360,307 @@
 				</span>
 			</div>
 
+			<!-- Row4 -->
+
+			<div class="vente-article-container" id="vente-22">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item22')">Description
+						<span class="vente-popup" id="vente-item22">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-23">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item23')">Description
+						<span class="vente-popup" id="vente-item23">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-24">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item24')">Description
+						<span class="vente-popup" id="vente-item24">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-25">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item25')">Description
+						<span class="vente-popup" id="vente-item25">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-26">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item26')">Description
+						<span class="vente-popup" id="vente-item26">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-27">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item27')">Description
+						<span class="vente-popup" id="vente-item27">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-28">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item28')">Description
+						<span class="vente-popup" id="vente-item28">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<!-- Row5 -->
+
+			<div class="vente-article-container" id="vente-29">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item29')">Description
+						<span class="vente-popup" id="vente-item29">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-30">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item30')">Description
+						<span class="vente-popup" id="vente-item30">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-31">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item31')">Description
+						<span class="vente-popup" id="vente-item31">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-32">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item32')">Description
+						<span class="vente-popup" id="vente-item32">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-33">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item33')">Description
+						<span class="vente-popup" id="vente-item33">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-34">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item34')">Description
+						<span class="vente-popup" id="vente-item34">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-35">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item35')">Description
+						<span class="vente-popup" id="vente-item35">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<!-- Row6 -->
+
+			<div class="vente-article-container" id="vente-36">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item36')">Description
+						<span class="vente-popup" id="vente-item36">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-37">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item37')">Description
+						<span class="vente-popup" id="vente-item37">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-38"
+			 id="vente-38">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item38')">Description
+						<span class="vente-popup" id="vente-item38">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-39">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item39')">Description
+						<span class="vente-popup" id="vente-item39">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-40">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item40')">Description
+						<span class="vente-popup" id="vente-item40">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-41">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item41')">Description
+						<span class="vente-popup" id="vente-item41">Description</span>
+					</button>
+				</span>
+			</div>
+
+			<div class="vente-article-container" id="vente-42">
+				<div>
+					Nom article
+					<img class="vente-article-image" src="https://placehold.co/600x400">
+				</div>
+				<p>25 €</p>
+				<span>
+					<button class="vente-panier vente-button">Ajouter au panier</button>
+					<button class="vente-description vente-button" onclick="showDescription('vente-item42')">Description
+						<span class="vente-popup" id="vente-item42">Description</span>
+					</button>
+				</span>
+			</div>
+
 		</section>
 
 		<section class="vente-sussy-section">
@@ -345,11 +668,13 @@
 			<input type="range" class="vente-range" id="vente-slider" min="100" max="600"/>
 			(On va voir ce que ça fait)
 		</section>
+	</div>
 	</main>
 
 	<footer>
 	</footer>
 
+	<script src="scripts/ai.js"></script>
 	<script src="scripts/connect4.js"></script>
 	<script src="scripts/vente.js"></script>
 	<script src="scripts/nav-scroll.js"></script>

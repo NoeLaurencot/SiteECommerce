@@ -1,7 +1,24 @@
 slider = document.querySelector("#vente-slider");
-const articleNumber = 21;
+const articleNumber = 42;
 
+let articleNumberPerRow = 0;
 let articleSize = 400;
+
+
+
+const width = 7;
+const height = 6;
+
+let playerTurn = "1"; // 1 : Yellow, 2 : Red
+const gameBoard = [
+  ["0", "0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0", "0"]
+]
 
 function showDescription(id) {
   let popup = document.getElementById(id);
@@ -10,8 +27,8 @@ function showDescription(id) {
 
 slider.oninput = function (e) {
   articleSize = this.value;
-  console.log(this.value);
   updateArticleSize();
+  updateArticlePerRow();
 }
 
 function updateArticleSize() {
@@ -22,3 +39,66 @@ function updateArticleSize() {
 
   }
 }
+
+function updateArticlePerRow() {
+  let section = document.getElementById("vente-article");
+  let articles = section.children;
+
+  let top = articles[0].offsetTop;
+  let sevenPerRow = true;
+
+  for (let i=0; i<7; i++) {
+    if (articles[i].offsetTop != top) {
+      sevenPerRow = false;
+    }
+  }
+
+  if (sevenPerRow) {
+    setupGame();
+    startGame();
+  }
+}
+
+function setupGame() {
+  let section = document.getElementById("vente-article");
+  let articles = section.children;
+
+  for (let i=0; i<42; i++) {
+    articles[i].classList.toggle("vente-seven-row");
+    articles[i].setAttribute("onclick", "update(gameBoard, " + i%7 + ")");
+  } 
+}
+
+function startGame() {
+  update(gameBoard);
+};
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+async function update(board, column) {
+  updateBoard(board, column, "1");
+
+  drawPieces(board);
+  let win = checkWinningCondition(board);
+  if (win == "1") {
+    console.log("amogus 1");
+    return;
+  } else if (win == "2") {
+    console.log("amogus 2");
+    return;
+  }
+
+  let col = getBestMove(copyBoard(board));
+  updateBoard(board, col, "2");
+  drawPieces(board);
+  win = checkWinningCondition(board);
+  if (win == "1") {
+    console.log("amogus 1");
+    return;
+  } else if (win == "2") {
+    console.log("amogus 2");
+    return;
+  }
+};
+
+
