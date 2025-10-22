@@ -80,6 +80,24 @@ body {
 .justify-center {
     justify-content: center;
 }
+/*Animation de slide a droite et a gauche*/
+@keyframes slideLeft {
+    from {transform: translateX(-110%)}
+    to {transform: translateX(0)}
+}
+@keyframes slideRight {
+    from {transform: translateX(110%)}
+    to {transform: translateX(0)}
+}
+.slideLeft {
+    animation: slideLeft 0.7s;
+    transition: 1s;
+}
+.slideRight {
+    animation: slideRight 0.7s;
+    transition: 1s;
+
+}
 
 /* || Elements */
 

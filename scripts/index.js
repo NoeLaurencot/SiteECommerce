@@ -25,11 +25,16 @@ function addAlert(alertmsg) { //fonction qui permet de cree l'alerte personnalis
     alert.append(msg);
     const header = document.getElementsByTagName("header")[0];
     document.body.insertBefore(alert, header);
-    alert.className = ("index-alert-active index-alert");
-    setTimeout(function(){
-        alert.className = ("index-alert-leaving index-alert");
+    alert.className = ("index-alert");
+    setTimeout(function () {
+        alert.className = ("index-alert-active index-alert");
         setTimeout(function(){
-            document.getElementsByClassName("index-alert-leaving index-alert")[0].remove(); // on retire le premier element appellée
-        }, 400); // j'ai mis 4 seconde comme ceci l'animation a une marge de timeout
-    }, 2000);
+            alert.className = ("index-alert-leaving index-alert");
+            setTimeout(function(){
+                document.getElementsByClassName("index-alert-leaving index-alert")[0].remove(); // on retire le premier element appellée
+            }, 400); // j'ai mis 4 seconde comme ceci l'animation a une marge de timeout
+        }, 2000);
+    },1)
+
+
 }
