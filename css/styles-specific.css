@@ -754,7 +754,6 @@ pour éviter les ambigüitées ex: .vente-article-container {}
   right: -60px;
   background-color: var(--background);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
   border-radius: 50%;
   will-change: transform;
 }
