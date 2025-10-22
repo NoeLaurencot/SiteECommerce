@@ -364,24 +364,7 @@ footer {
     transform: scale(1.03);
 }
 
-/* --- Responsive Design --- */
-@media (max-width: 900px) {
-    .intro {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .intro div:first-child {
-        text-align: center;
-    }
-
-    .intro-image {
-        text-align: center;
-    }
-}
-
-
-/* === Section Histoire + Équipe regroupée === */
 .histoire-equipe {
    padding: 60px 20px;
 }
