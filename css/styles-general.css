@@ -89,11 +89,11 @@ body {
     from {transform: translateX(110%)}
     to {transform: translateX(0)}
 }
-.slideLeft {
+.slide-left {
     animation: slideLeft 0.7s;
     transition: 1s;
 }
-.slideRight {
+.slide-right {
     animation: slideRight 0.7s;
     transition: 1s;
 
