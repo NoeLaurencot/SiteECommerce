@@ -4,13 +4,13 @@ const articleNumber = 42;
 let articleNumberPerRow = 0;
 let articleSize = 400;
 
-
+let gameOn = false;
 
 const width = 7;
 const height = 6;
 
 let playerTurn = "1"; // 1 : Yellow, 2 : Red
-const gameBoard = [
+let gameBoard = [
   ["0", "0", "0", "0", "0", "0"],
   ["0", "0", "0", "0", "0", "0"],
   ["0", "0", "0", "0", "0", "0"],
@@ -48,7 +48,7 @@ function updateArticlePerRow() {
   let sevenPerRow = true;
 
   for (let i=0; i<7; i++) {
-    if (articles[i].offsetTop != top) {
+    if (articles[i].offsetTop != top || articles[7].offsetTop == top) {
       sevenPerRow = false;
     }
   }
@@ -56,21 +56,47 @@ function updateArticlePerRow() {
   if (sevenPerRow) {
     setupGame();
     startGame();
+  } else if (gameOn) {
+    quitGame();
   }
 }
 
 function setupGame() {
+  gameOn = true;
+
   let section = document.getElementById("vente-article");
   let articles = section.children;
 
   for (let i=0; i<42; i++) {
-    articles[i].classList.toggle("vente-seven-row");
+    articles[i].classList.add("vente-seven-row");
     articles[i].setAttribute("onclick", "update(gameBoard, " + i%7 + ")");
   } 
 }
 
+function quitGame() {
+  gameOn = false;
+
+  let section = document.getElementById("vente-article");
+  let articles = section.children;
+
+  for (let i=0; i<42; i++) {
+    articles[i].classList.remove("vente-seven-row");
+    articles[i].removeAttribute("onclick", "update(gameBoard, " + i%7 + ")");
+    articles[i].style.backgroundColor = "#444";  
+  } 
+}
+
 function startGame() {
-  update(gameBoard);
+  playerTurn = "1";
+  gameBoard = [
+  ["0", "0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0", "0"]
+]
 };
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -87,6 +113,8 @@ async function update(board, column) {
     console.log("amogus 2");
     return;
   }
+
+  await sleep(1000);
 
   let col = getBestMove(copyBoard(board));
   updateBoard(board, col, "2");
