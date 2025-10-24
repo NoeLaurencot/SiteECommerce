@@ -234,18 +234,48 @@ body {
   --slider-color: #323232;
   --article-background-dark-color: #444;
   --article-background-hover-dark-color: #888;
-  --buy-panier-color: #44f;
   --buy-panier-hover-color: #88f;
 }
 
 .vente-content {
   flex-direction: column;
-    text-align: center;
+  text-align: center;
+}
+
+.vente-main-section {
+  display: flex;
+}
+
+.vente-aside {
+  max-height: 2000px;
+  width: 21%;
+  margin-left: 2%;
+  margin-right: 2%;
+  background-color: var(--tile);
+  border-radius: 8px;
+  transform: 0.2s;
+}
+
+.vente-promo {
+  background-color: var(--accent);
+  border-radius: 10px;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-right: auto;
+  padding: 10px;
+  width: 70%;
+  height: fit-content;
+  font-size: 2em;
+  animation: pulse 1s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); } 
+  100% { transform: scale(1); }
 }
 
 .vente-article-section {
-  margin-left: 25%;
-  margin-right: 25%;
   width: 50%;
   max-height: 2000px;
   display: flex;
@@ -330,18 +360,14 @@ body {
 }
 
 .vente-panier {
-  background-color: var(--buy-panier-color);
+  background-color: var(--secondary);
   color: white;
-}
-
-.vente-panier:hover {
-  background-color: var(--buy-panier-hover-color);
 }
 
 .vente-description {
   position: relative;
-    display: inline-block;
-    cursor: pointer;
+  display: inline-block;
+  cursor: pointer;
   margin-left: auto;
 }
 
@@ -358,6 +384,7 @@ body {
   bottom: 125%;
   left: 50%;
   margin-left: -80px;
+  padding: 5px;
 }
 
 .vente-description .vente-show {
@@ -391,8 +418,8 @@ body {
 }
 
 #vente-slider::-moz-range-thumb {
-    width: 3em;
-    height: 3em;                
+    width: 2.5em;
+    height: 2.5em;                
     border: none;                   
     border-radius: 0;               
     background: currentColor;
