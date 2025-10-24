@@ -1,4 +1,4 @@
-const depth = 7;
+const depth = 6;
 
 function aiMove(board, turn) {}
 function playMove(board, col, turn) {
@@ -27,10 +27,10 @@ function search(d, board, turn) {
 	}
 
 
-	//let e = evaluateBoard(board, false);
-	//if (e != 0) {
-	//	return e;
-	//}
+	let e = evaluateBoard(board, false);
+	if (e != 0) {
+		return e;
+	}
 
 	let newBoard = copyBoard(board);
 	if (turn == "1") {

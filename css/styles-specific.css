@@ -466,6 +466,7 @@ body {
 
 .cart-item-img {
   display: flex;
+  width: 40vw;
   align-items: center;
 }
 
