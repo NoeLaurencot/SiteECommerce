@@ -1,4 +1,4 @@
-const depth = 7;
+const depth = 5;
 
 function aiMove(board, turn) {}
 function playMove(board, col, turn) {
@@ -21,16 +21,14 @@ function getBestMove(board) {
 	return bestMove;
 }
 function search(d, board, turn) {
-
 	if (d == 0) {
 		return evaluateBoard(board, true);
 	}
 
-
-	//let e = evaluateBoard(board, false);
-	//if (e != 0) {
-	//	return e;
-	//}
+	let e = evaluateBoard(board, false);
+	if (e != 0) {
+		return e;
+	}
 
 	let newBoard = copyBoard(board);
 	if (turn == "1") {
@@ -44,7 +42,7 @@ function search(d, board, turn) {
 		for (let col = 0; col < 7; col++) {
 			if (board[col][0] == "0") {
 				let updatedBoard = playMove(copyBoard(board), col, turn);
-				let e = search(d-1, updatedBoard, turn)
+				let e = search(d-1, copyBoard(updatedBoard), turn)
 				if (minEval > e) {
 					minEval = e;
 				}
@@ -67,6 +65,8 @@ function search(d, board, turn) {
 	}
 }
 function evaluateBoard(board, full) {
+	const columnCoefficients = [0.1, 0.1, 0.4, 0.7, 0.4, 0.1, 0.1];
+
 	let win = checkWinningCondition(board);
 	if (win == "1") {
 		return -500;
@@ -75,11 +75,25 @@ function evaluateBoard(board, full) {
 	}
 
 	let score = 0;
+
 	if (full) {
+		// checks lines of three
 		let redLines = getNumberOfThrees(board, "2");
 		let yellowLines = getNumberOfThrees(board, "1");
-		score = (redLines - yellowLines) * 1;
+		score = (redLines - yellowLines) * 5;
+
+		// checks how centered pieces are
+		for (let row = 0; row < height; row++) {
+			for (let col = 0; col < width; col++) {
+				if (board[col][row] == "1") {
+					score -= columnCoefficients[col];
+				} else if (board[col][row] == "2") {
+					score += columnCoefficients[col];
+				}
+			}
+		}
 	}
+
 
 	return score;
 }
