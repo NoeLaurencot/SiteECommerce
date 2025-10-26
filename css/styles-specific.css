@@ -1187,7 +1187,7 @@ body {
 /* Labels */
 .input-group label {
   color: #fff;
-  2 font-weight: bold;
+  font-weight: bold;
   display: block;
   margin-bottom: 5px;
 }
