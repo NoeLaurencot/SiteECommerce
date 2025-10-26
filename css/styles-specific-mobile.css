@@ -30,40 +30,43 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 /* Page Accueil */
 @media (max-width: 1200px) {
-    .index-alert-active {
-        font-size: 0.8rem;
-    }
+	.index-alert-active {
+		font-size: 0.8rem;
+	}
 
-    .index-alert-leaving {
-        font-size: 0.8rem;
-    }
+	.index-alert-leaving {
+		font-size: 0.8rem;
+	}
 }
 
 @media (max-width: 800px) {
-    .index-alert-active {
-        font-size: 0.5rem;
-    }
+	.index-alert-active {
+		font-size: 0.5rem;
+	}
 
-    .index-alert-leaving {
-        font-size: 0.5rem;
-    }
+	.index-alert-leaving {
+		font-size: 0.5rem;
+	}
 }
+
 @media (max-width: 600px) {
-    .index-article img {
-        width: 40vw;
-        height: auto;
-    }
+	.index-article img {
+		width: 40vw;
+		height: auto;
+	}
 
 }
+
 @media (max-width: 500px) {
-    .index-alert-active {
-        font-size: 0.3rem;
-    }
+	.index-alert-active {
+		font-size: 0.3rem;
+	}
 
-    .index-alert-leaving {
-        font-size: 0.3rem;
-    }
+	.index-alert-leaving {
+		font-size: 0.3rem;
+	}
 }
+
 /* Page Vente */
 
 .vente-article-container {
@@ -113,15 +116,32 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 		flex-direction: column;
 	}
 
+	.cart-item-desc p {
+		margin: 5px;
+	}
+
 	.cart-item-price {
 		justify-content: flex-start;
 		width: fit-content;
-		margin-top: 10px;
+		margin-top: 8px;
 		margin-left: 8px;
 	}
 
 	.cart-total-promo {
 		align-items: flex-start;
+	}
+
+	#horizontal-left {
+		left: 3%;
+	}
+
+	#horizontal-right {
+		right: 3%;
+	}
+
+	#horizontal-left,
+	#horizontal-right {
+		top: 58%;
 	}
 }
 
@@ -163,13 +183,32 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 
 	.cart-list-tile img {
 		padding: 0;
-		width: 100%;
 		height: auto;
+	}
+
+	.cart-item-img img {
+		width: 200px;
 	}
 
 	.cart-item-price-detail {
 		top: -50px;
 		left: 0;
+	}
+
+	#horizontal-left {
+		left: 4%;
+	}
+
+	#horizontal-right {
+		right: 4%;
+	}
+
+	#horizontal-left,
+	#horizontal-right {
+		top: 60%;
+		padding: 4px;
+		font-size: 1.2rem;
+
 	}
 }
 
@@ -187,7 +226,7 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 	}
 
 	.cart-list-tile img {
-		width: 80%;
+		width: clamp(100px, 70%, 300px);
 	}
 
 	.cart-item-price > span {
@@ -219,49 +258,63 @@ pour éviter les ambigüitées ex: .vente-article-container {}
 		flex-shrink: 0;
 	}
 
-	/* À implémenter */
+	#horizontal-left {
+		left: 5%;
+	}
 
-	    .video-player {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 50%;
-        top: 50%;
-        translate: -50% -50%;
-        width: 90%;
-        height: 90%;
-        justify-content: center;
-        align-items: center;
-    }
+	#horizontal-right {
+		right: 5%;
+	}
 
-    .video-player-content {
-        position: relative;
-        width: 100vw;
-        padding: 1.5vw;
-        background-color: var(--background);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-    }
+	#horizontal-left,
+	#horizontal-right {
+		top: 65%;
+		padding: 4px;
+		font-size: 1.2rem;
 
-    .video-player-content video {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 8px;
-    }
+	}
 
-    .video-player-close {
-        position: absolute;
-        font-size: clamp(0.6rem, 6vw, 1.2rem);
-        padding: clamp(5px, 2vw, 12px);
-        top: -60px;
-        right: calc(5vw + 37%);
-        will-change: transform;
-    }
+	.video-player {
+		display: none;
+		position: fixed;
+		z-index: 9999;
+		left: 50%;
+		top: 50%;
+		translate: -50% -50%;
+		width: 90%;
+		height: 90%;
+		justify-content: center;
+		align-items: center;
+	}
 
-    .video-player-close:hover {
-        cursor: pointer;
-    }
+	.video-player-content {
+		position: relative;
+		width: 100vw;
+		padding: 1.5vw;
+		background-color: var(--background);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+	}
+
+	.video-player-content video {
+		width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 8px;
+	}
+
+	.video-player-close {
+		position: absolute;
+		font-size: clamp(0.6rem, 6vw, 1.2rem);
+		padding: clamp(5px, 2vw, 12px);
+		top: -60px;
+		right: calc(5vw + 37%);
+		will-change: transform;
+	}
+
+	.video-player-close:hover {
+		cursor: pointer;
+	}
 }
 
 

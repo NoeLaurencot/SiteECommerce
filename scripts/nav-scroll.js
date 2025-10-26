@@ -6,5 +6,3 @@ window.addEventListener('scroll', function () { // Ajoute un listener de scroll
         nav.classList.remove('scrolled'); // Sinon enlève la classe scrolled
     }
 });
-
-// Par Noé Laurençot
