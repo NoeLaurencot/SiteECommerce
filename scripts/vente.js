@@ -44,11 +44,14 @@ function updateArticlePerRow() {
   let section = document.getElementById("vente-article");
   let articles = section.children;
 
-  let top = articles[0].offsetTop;
+  let top = articles[0].getBoundingClientRect().top;
   let sevenPerRow = true;
 
-  for (let i=0; i<7; i++) {
-    if (articles[i].offsetTop != top || articles[7].offsetTop == top) {
+  for (let i=1; i<7; i++) {
+    if (articles[7].getBoundingClientRect().top == top) {
+      sevenPerRow = false;
+    }
+    if (articles[i].getBoundingClientRect().top != top) {
       sevenPerRow = false;
     }
   }
@@ -67,7 +70,7 @@ function setupGame() {
   let section = document.getElementById("vente-article");
   let articles = section.children;
 
-  for (let i=0; i<42; i++) {
+  for (let i=0; i<articleNumber; i++) {
     articles[i].classList.add("vente-seven-row");
     articles[i].setAttribute("onclick", "update(gameBoard, " + i%7 + ")");
   } 
@@ -79,7 +82,7 @@ function quitGame() {
   let section = document.getElementById("vente-article");
   let articles = section.children;
 
-  for (let i=0; i<42; i++) {
+  for (let i=0; i<articleNumber; i++) {
     articles[i].classList.remove("vente-seven-row");
     articles[i].removeAttribute("onclick", "update(gameBoard, " + i%7 + ")");
     articles[i].style.backgroundColor = "#444";  
@@ -107,10 +110,8 @@ async function update(board, column) {
   drawPieces(board);
   let win = checkWinningCondition(board);
   if (win == "1") {
-    console.log("amogus 1");
     return;
   } else if (win == "2") {
-    console.log("amogus 2");
     return;
   }
 
@@ -121,10 +122,8 @@ async function update(board, column) {
   drawPieces(board);
   win = checkWinningCondition(board);
   if (win == "1") {
-    console.log("amogus 1");
     return;
   } else if (win == "2") {
-    console.log("amogus 2");
     return;
   }
 };
