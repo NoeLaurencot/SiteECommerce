@@ -264,8 +264,7 @@ body {
 .vente-content {
   flex-direction: column;
   text-align: center;
-<<<<<<< HEAD
-=======
+  <<<<<<< HEAD=======
 }
 
 .vente-main-section {
@@ -296,10 +295,19 @@ body {
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); } 
-  100% { transform: scale(1); }
->>>>>>> d1083778a43c91b5dfcf3ea1347855f7ec32814d
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+  >>>>>>>d1083778a43c91b5dfcf3ea1347855f7ec32814d
 }
 
 .vente-article-section {
@@ -445,19 +453,17 @@ body {
 }
 
 #vente-slider::-moz-range-thumb {
-<<<<<<< HEAD
-  width: 3em;
+  <<<<<<< HEAD width: 3em;
   height: 3em;
   border: none;
   border-radius: 0;
   background: currentColor;
-=======
-    width: 2.5em;
-    height: 2.5em;                
-    border: none;                   
-    border-radius: 0;               
-    background: currentColor;
->>>>>>> d1083778a43c91b5dfcf3ea1347855f7ec32814d
+  =======width: 2.5em;
+  height: 2.5em;
+  border: none;
+  border-radius: 0;
+  background: currentColor;
+  >>>>>>>d1083778a43c91b5dfcf3ea1347855f7ec32814d
 }
 
 #vente-slider::-moz-range-progress {
@@ -980,80 +986,71 @@ body {
   }
 }
 
-/* === Section Histoire + Équipe === */
+/* === Section Histoire + Équipe regroupée === */
+.histoire-equipe {
+  background-color: #2b2b2b;
+  /* même fond que "À propos de nous" */
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 5px;
+  /* Espace équilibré avant la section suivante */
+}
+
+.histoire-equipe h2 {
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.histoire-equipe p {
+  max-width: 750px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* === Équipe (membres) === */
+.histoire-equipe .team {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  /* ✅ Plus d’espace entre les photos */
+}
+
 .histoire-equipe .member {
   position: relative;
-  background-color: #fff;
   border-radius: 10px;
-  padding: 15px;
+  overflow: hidden;
   width: 180px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* important pour que le fond ne dépasse pas */
+  /* ✅ Taille légèrement augmentée pour la lisibilité */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: #2b2b2b;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
 
 .histoire-equipe .member:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Image des membres */
 .histoire-equipe .member img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  transition: opacity 0.3s ease;
+  display: block;
 }
 
-.histoire-equipe .member:hover img {
-  opacity: 0.9;
+
+/* ✅ Titre du membre légèrement plus visible */
+.histoire-equipe .member h3 {
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
-/* Texte sur les cartes */
-.histoire-equipe .member h3,
-.histoire-equipe .member p {
-  background-color: rgba(0, 0, 0, 0.6); /* fond noir transparent */
-  color: #fff; /* texte blanc */
-  margin: 0;
-  padding: 5px;
-  border-radius: 5px;
-  text-align: center;
-}
-<<<<<<< HEAD
-.histoire-equipe .member img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.histoire-equipe .member {
-  position: relative;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  width: 180px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  /* important pour que le fond ne dépasse pas */
-}
-
-.histoire-equipe .member h3,
-.histoire-equipe .member p {
-  background-color: rgba(0, 0, 0, 0.6);
-  /* fond noir transparent */
-  color: #fff;
-  /* texte blanc */
-  margin: 0;
-  padding: 5px;
-  border-radius: 5px;
-}
-=======
-
->>>>>>> d1083778a43c91b5dfcf3ea1347855f7ec32814d
 
 
 /* === Section Nos Chiffres (même espacement que les autres sections) === */
@@ -1063,7 +1060,7 @@ body {
   color: #fff;
   text-align: center;
   padding: 50px 20px;
-  margin: 20px 0;
+  margin: 25px 0;
   /* ✅ même petite marge que entre “À propos” et “Notre histoire & notre équipe” */
 }
 
@@ -1198,12 +1195,6 @@ body {
 }
 
 .action-btn:hover {
-<<<<<<< HEAD
-  background-color: #1c0248;
-  box-shadow: 0 0 10px rgba(178, 143, 255, 0.6);
+  background-color: #7a3fe0;
+  box-shadow: 0 0 10px rgba(42, 6, 119, 0.6);
 }
-=======
-    background-color: #7a3fe0;
-    box-shadow: 0 0 10px rgba(178, 143, 255, 0.6);
-}
->>>>>>> d1083778a43c91b5dfcf3ea1347855f7ec32814d
